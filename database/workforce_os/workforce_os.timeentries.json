@@ -1,0 +1,3220 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e295"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-01",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-01T06:29:24.000Z"
+  },
+  "durationHours": 6.49,
+  "category": "Work",
+  "location": "New York",
+  "notes": "Updated documentation",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e296"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-02",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-02T07:52:12.000Z"
+  },
+  "durationHours": 7.87,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e297"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-05",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-05T05:46:12.000Z"
+  },
+  "durationHours": 5.77,
+  "category": "Training",
+  "location": "Dhaka",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e298"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-06",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-06T07:28:48.000Z"
+  },
+  "durationHours": 7.48,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Completed sprint task",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e299"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-13",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-13T02:24:00.000Z"
+  },
+  "durationHours": 2.4,
+  "category": "Meeting",
+  "location": "New York",
+  "notes": "Worked on API integration",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e29a"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-14",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-14T01:12:00.000Z"
+  },
+  "durationHours": 1.2,
+  "category": "Training",
+  "location": "Toronto",
+  "notes": "Completed sprint task",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e29b"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-16",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-16T04:29:24.000Z"
+  },
+  "durationHours": 4.49,
+  "category": "Meeting",
+  "location": "Dubai",
+  "notes": "Updated documentation",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e29c"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-19",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-19T03:46:48.000Z"
+  },
+  "durationHours": 3.78,
+  "category": "Work",
+  "location": "London",
+  "notes": "Updated documentation",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e29d"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-28",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-28T02:21:00.000Z"
+  },
+  "durationHours": 2.35,
+  "category": "Training",
+  "location": "Dhaka",
+  "notes": "Worked on API integration",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e29e"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-31",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-31T00:52:48.000Z"
+  },
+  "durationHours": 0.88,
+  "category": "Training",
+  "location": "Dhaka",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e29f"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "date": "2026-10-08",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-08T01:04:12.000Z"
+  },
+  "durationHours": 1.07,
+  "category": "Meeting",
+  "location": "New York",
+  "notes": "Worked on API integration",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a0"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "date": "2026-10-09",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-09T01:52:12.000Z"
+  },
+  "durationHours": 1.87,
+  "category": "Training",
+  "location": "London",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a1"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "date": "2026-10-19",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-19T02:04:48.000Z"
+  },
+  "durationHours": 2.08,
+  "category": "Meeting",
+  "location": "Dhaka",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a2"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "date": "2026-10-22",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-22T04:17:24.000Z"
+  },
+  "durationHours": 4.29,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a3"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "date": "2026-10-26",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-26T06:34:12.000Z"
+  },
+  "durationHours": 6.57,
+  "category": "Training",
+  "location": "Toronto",
+  "notes": "Updated documentation",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a4"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "date": "2026-10-27",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-27T02:25:48.000Z"
+  },
+  "durationHours": 2.43,
+  "category": "Meeting",
+  "location": "Toronto",
+  "notes": "Updated documentation",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a5"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-02",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-02T07:03:00.000Z"
+  },
+  "durationHours": 7.05,
+  "category": "Training",
+  "location": "Chattogram",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-10",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-10T02:32:24.000Z"
+  },
+  "durationHours": 2.54,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a7"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-17",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-17T07:33:00.000Z"
+  },
+  "durationHours": 7.55,
+  "category": "Training",
+  "location": "Dhaka",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a8"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-22",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-22T01:36:36.000Z"
+  },
+  "durationHours": 1.61,
+  "category": "Work",
+  "location": "New York",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2a9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-25",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-25T06:37:48.000Z"
+  },
+  "durationHours": 6.63,
+  "category": "Work",
+  "location": "Dubai",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2aa"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-26",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-26T02:58:12.000Z"
+  },
+  "durationHours": 2.97,
+  "category": "Work",
+  "location": "Chattogram",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ab"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-03",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-03T00:03:00.000Z"
+  },
+  "durationHours": 0.05,
+  "category": "Work",
+  "location": "Chattogram",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ac"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-05",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-05T07:45:00.000Z"
+  },
+  "durationHours": 7.75,
+  "category": "Meeting",
+  "location": "Dubai",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ad"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-17",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-17T01:12:00.000Z"
+  },
+  "durationHours": 1.2,
+  "category": "Training",
+  "location": "Dhaka",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ae"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-18",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-18T01:30:00.000Z"
+  },
+  "durationHours": 1.5,
+  "category": "Work",
+  "location": "New York",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2af"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-20",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-20T05:51:00.000Z"
+  },
+  "durationHours": 5.85,
+  "category": "Work",
+  "location": "New York",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b0"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-28",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-28T03:57:36.000Z"
+  },
+  "durationHours": 3.96,
+  "category": "Work",
+  "location": "Toronto",
+  "notes": "Updated documentation",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b1"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "date": "2026-10-29",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-29T03:07:48.000Z"
+  },
+  "durationHours": 3.13,
+  "category": "Work",
+  "location": "London",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.633Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b2"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "date": "2026-10-04",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-04T00:26:24.000Z"
+  },
+  "durationHours": 0.44,
+  "category": "Meeting",
+  "location": "Toronto",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b3"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "date": "2026-10-05",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-05T06:05:24.000Z"
+  },
+  "durationHours": 6.09,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Completed sprint task",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b4"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "date": "2026-10-08",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-08T01:32:24.000Z"
+  },
+  "durationHours": 1.54,
+  "category": "Meeting",
+  "location": "Dubai",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b5"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "date": "2026-10-09",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-09T06:54:36.000Z"
+  },
+  "durationHours": 6.91,
+  "category": "Work",
+  "location": "Chattogram",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "date": "2026-10-11",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-11T00:06:36.000Z"
+  },
+  "durationHours": 0.11,
+  "category": "Work",
+  "location": "Dhaka",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b7"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "date": "2026-10-13",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-13T05:39:36.000Z"
+  },
+  "durationHours": 5.66,
+  "category": "Work",
+  "location": "Dubai",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b8"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "date": "2026-10-17",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-17T04:03:36.000Z"
+  },
+  "durationHours": 4.06,
+  "category": "Training",
+  "location": "New York",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2b9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "date": "2026-10-29",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-29T03:30:00.000Z"
+  },
+  "durationHours": 3.5,
+  "category": "Meeting",
+  "location": "New York",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ba"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-01",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-01T01:18:00.000Z"
+  },
+  "durationHours": 1.3,
+  "category": "Work",
+  "location": "London",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2bb"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-02",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-02T05:54:00.000Z"
+  },
+  "durationHours": 5.9,
+  "category": "Training",
+  "location": "New York",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2bc"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-03",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-03T01:37:12.000Z"
+  },
+  "durationHours": 1.62,
+  "category": "Training",
+  "location": "London",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2bd"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-05",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-05T07:11:24.000Z"
+  },
+  "durationHours": 7.19,
+  "category": "Meeting",
+  "location": "New York",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2be"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-06",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-06T01:19:48.000Z"
+  },
+  "durationHours": 1.33,
+  "category": "Training",
+  "location": "Toronto",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2bf"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-07",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-07T04:17:24.000Z"
+  },
+  "durationHours": 4.29,
+  "category": "Training",
+  "location": "New York",
+  "notes": "Updated documentation",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c0"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-10",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-10T05:42:00.000Z"
+  },
+  "durationHours": 5.7,
+  "category": "Meeting",
+  "location": "Toronto",
+  "notes": "Updated documentation",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c1"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-11",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-11T00:52:48.000Z"
+  },
+  "durationHours": 0.88,
+  "category": "Meeting",
+  "location": "London",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c2"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-12",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-12T00:22:48.000Z"
+  },
+  "durationHours": 0.38,
+  "category": "Work",
+  "location": "New York",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c3"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-13",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-13T07:22:12.000Z"
+  },
+  "durationHours": 7.37,
+  "category": "Meeting",
+  "location": "New York",
+  "notes": "Fixed reported bug",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c4"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-18",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-18T03:58:48.000Z"
+  },
+  "durationHours": 3.98,
+  "category": "Meeting",
+  "location": "London",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c5"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-23",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-23T07:40:12.000Z"
+  },
+  "durationHours": 7.67,
+  "category": "Training",
+  "location": "Chattogram",
+  "notes": "Worked on API integration",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-24",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-24T00:29:24.000Z"
+  },
+  "durationHours": 0.49,
+  "category": "Work",
+  "location": "London",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c7"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-28",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-28T04:48:36.000Z"
+  },
+  "durationHours": 4.81,
+  "category": "Work",
+  "location": "Dubai",
+  "notes": "Completed sprint task",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c8"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-30",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-30T02:52:48.000Z"
+  },
+  "durationHours": 2.88,
+  "category": "Work",
+  "location": "Chattogram",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2c9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c3"
+  },
+  "date": "2026-10-04",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-04T06:19:12.000Z"
+  },
+  "durationHours": 6.32,
+  "category": "Meeting",
+  "location": "London",
+  "notes": "Updated documentation",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ca"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c3"
+  },
+  "date": "2026-10-12",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-12T00:40:48.000Z"
+  },
+  "durationHours": 0.68,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2cb"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c3"
+  },
+  "date": "2026-10-17",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-17T04:51:36.000Z"
+  },
+  "durationHours": 4.86,
+  "category": "Meeting",
+  "location": "Dhaka",
+  "notes": "Fixed reported bug",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2cc"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c3"
+  },
+  "date": "2026-10-18",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-18T01:00:36.000Z"
+  },
+  "durationHours": 1.01,
+  "category": "Training",
+  "location": "Toronto",
+  "notes": "Fixed reported bug",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2cd"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c3"
+  },
+  "date": "2026-10-31",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-31T06:02:24.000Z"
+  },
+  "durationHours": 6.04,
+  "category": "Training",
+  "location": "Toronto",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.657Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ce"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-03",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-03T03:09:36.000Z"
+  },
+  "durationHours": 3.16,
+  "category": "Work",
+  "location": "Chattogram",
+  "notes": "Fixed reported bug",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2cf"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-04",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-04T04:23:24.000Z"
+  },
+  "durationHours": 4.39,
+  "category": "Work",
+  "location": "London",
+  "notes": "Fixed reported bug",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d0"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-08",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-08T02:37:48.000Z"
+  },
+  "durationHours": 2.63,
+  "category": "Work",
+  "location": "Chattogram",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d1"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-13",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-13T06:23:24.000Z"
+  },
+  "durationHours": 6.39,
+  "category": "Meeting",
+  "location": "Chattogram",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d2"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-14",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-14T07:29:24.000Z"
+  },
+  "durationHours": 7.49,
+  "category": "Meeting",
+  "location": "Toronto",
+  "notes": "Fixed reported bug",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d3"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-15",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-15T07:14:24.000Z"
+  },
+  "durationHours": 7.24,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d4"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-19",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-19T00:20:24.000Z"
+  },
+  "durationHours": 0.34,
+  "category": "Meeting",
+  "location": "Chattogram",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d5"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-20",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-20T04:12:36.000Z"
+  },
+  "durationHours": 4.21,
+  "category": "Work",
+  "location": "London",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-21",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-21T06:33:00.000Z"
+  },
+  "durationHours": 6.55,
+  "category": "Training",
+  "location": "Dhaka",
+  "notes": "Updated documentation",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d7"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-27",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-27T04:07:12.000Z"
+  },
+  "durationHours": 4.12,
+  "category": "Meeting",
+  "location": "Chattogram",
+  "notes": "Worked on API integration",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d8"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-28",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-28T05:29:24.000Z"
+  },
+  "durationHours": 5.49,
+  "category": "Work",
+  "location": "Toronto",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2d9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-30",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-30T07:38:24.000Z"
+  },
+  "durationHours": 7.64,
+  "category": "Meeting",
+  "location": "Toronto",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2da"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-31",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-31T07:48:36.000Z"
+  },
+  "durationHours": 7.81,
+  "category": "Work",
+  "location": "Dubai",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.672Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2db"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-02",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-02T06:49:48.000Z"
+  },
+  "durationHours": 6.83,
+  "category": "Work",
+  "location": "Chattogram",
+  "notes": "Fixed reported bug",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2dc"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-04",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-04T07:49:48.000Z"
+  },
+  "durationHours": 7.83,
+  "category": "Meeting",
+  "location": "Dubai",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2dd"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-07",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-07T03:37:48.000Z"
+  },
+  "durationHours": 3.63,
+  "category": "Work",
+  "location": "Dubai",
+  "notes": "Completed sprint task",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2de"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-08",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-08T00:48:36.000Z"
+  },
+  "durationHours": 0.81,
+  "category": "Training",
+  "location": "Dhaka",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2df"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-11",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-11T06:58:12.000Z"
+  },
+  "durationHours": 6.97,
+  "category": "Meeting",
+  "location": "Dubai",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e0"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-16",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-16T02:52:12.000Z"
+  },
+  "durationHours": 2.87,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e1"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-17",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-17T06:51:00.000Z"
+  },
+  "durationHours": 6.85,
+  "category": "Work",
+  "location": "London",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e2"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-19",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-19T01:36:00.000Z"
+  },
+  "durationHours": 1.6,
+  "category": "Meeting",
+  "location": "Dhaka",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e3"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-23",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-23T05:16:48.000Z"
+  },
+  "durationHours": 5.28,
+  "category": "Training",
+  "location": "London",
+  "notes": "Worked on API integration",
+  "source": "timer",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e4"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "date": "2026-10-28",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-28T03:33:00.000Z"
+  },
+  "durationHours": 3.55,
+  "category": "Work",
+  "location": "London",
+  "notes": "Updated documentation",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e5"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-01",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-01T07:27:00.000Z"
+  },
+  "durationHours": 7.45,
+  "category": "Training",
+  "location": "New York",
+  "notes": "Reviewed pull request",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-03",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-03T02:53:24.000Z"
+  },
+  "durationHours": 2.89,
+  "category": "Meeting",
+  "location": "Dhaka",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e7"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-04",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-04T00:22:12.000Z"
+  },
+  "durationHours": 0.37,
+  "category": "Work",
+  "location": "London",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e8"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-05",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-05T07:08:24.000Z"
+  },
+  "durationHours": 7.14,
+  "category": "Meeting",
+  "location": "Dhaka",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2e9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-07",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-07T00:38:24.000Z"
+  },
+  "durationHours": 0.64,
+  "category": "Work",
+  "location": "Dubai",
+  "notes": "Updated documentation",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ea"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-12",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-12T07:30:00.000Z"
+  },
+  "durationHours": 7.5,
+  "category": "Training",
+  "location": "Dhaka",
+  "notes": "Completed sprint task",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2eb"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-15",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-15T00:39:36.000Z"
+  },
+  "durationHours": 0.66,
+  "category": "Work",
+  "location": "Dhaka",
+  "notes": "Reviewed pull request",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ec"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-19",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-19T07:07:48.000Z"
+  },
+  "durationHours": 7.13,
+  "category": "Training",
+  "location": "Toronto",
+  "notes": "Updated documentation",
+  "source": "manual",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ed"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-22",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-22T07:15:36.000Z"
+  },
+  "durationHours": 7.26,
+  "category": "Training",
+  "location": "Dubai",
+  "notes": "Completed sprint task",
+  "source": "timer",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ee"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-23",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-23T05:04:12.000Z"
+  },
+  "durationHours": 5.07,
+  "category": "Meeting",
+  "location": "Dubai",
+  "notes": "Worked on API integration",
+  "source": "manual",
+  "status": "Submitted",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ef"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-24",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-24T04:42:00.000Z"
+  },
+  "durationHours": 4.7,
+  "category": "Meeting",
+  "location": "London",
+  "notes": "Fixed reported bug",
+  "source": "manual",
+  "status": "Draft",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f0"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "date": "2026-10-25",
+  "startTime": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "endTime": {
+    "$date": "2026-10-25T03:16:48.000Z"
+  },
+  "durationHours": 3.28,
+  "category": "Work",
+  "location": "Dhaka",
+  "notes": "Worked on API integration",
+  "source": "timer",
+  "status": "Approved",
+  "isAdjustment": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.691Z"
+  }
+}]

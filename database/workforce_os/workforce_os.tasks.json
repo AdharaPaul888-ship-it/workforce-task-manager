@@ -1,0 +1,256 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "owner": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "ownerName": "John Doe",
+  "title": "Website Redesign",
+  "desc": "Redesign the company website with modern UI/UX",
+  "category": "Admin",
+  "priority": "High",
+  "status": "Approved",
+  "due": {
+    "$date": "2026-10-25T00:00:00.000Z"
+  },
+  "progress": 85,
+  "hoursLogged": 25.5,
+  "targetQuantity": 10,
+  "completedQuantity": 9,
+  "monthCycle": "2026-10",
+  "proofAttachments": [
+    {
+      "title": "Design mockup",
+      "fileName": "redesign-mockup.pdf",
+      "type": "design",
+      "timestamp": {
+        "$date": "2026-10-11T07:02:47.812Z"
+      },
+      "previewUrl": "/preview/1",
+      "_id": {
+        "$oid": "6acb3498669147c153e1e0bf"
+      }
+    },
+    {
+      "title": "Client feedback",
+      "fileName": "feedback.pdf",
+      "type": "feedback",
+      "timestamp": {
+        "$date": "2026-10-11T07:02:47.812Z"
+      },
+      "previewUrl": "/preview/2",
+      "_id": {
+        "$oid": "6acb3498669147c153e1e0c0"
+      }
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.273Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.273Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "owner": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "ownerName": "Jane Smith",
+  "title": "API Optimization",
+  "desc": "Optimize backend API performance and reduce response times",
+  "category": "Service",
+  "priority": "Medium",
+  "status": "Submitted",
+  "due": {
+    "$date": "2026-11-01T00:00:00.000Z"
+  },
+  "progress": 60,
+  "hoursLogged": 15.2,
+  "targetQuantity": 5,
+  "completedQuantity": 3,
+  "monthCycle": "2026-10",
+  "proofAttachments": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "owner": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "ownerName": "Sarah Khan",
+  "title": "Mobile App Beta",
+  "desc": "Launch beta version of the mobile application",
+  "category": "Service",
+  "priority": "High",
+  "status": "Draft",
+  "due": {
+    "$date": "2026-11-15T00:00:00.000Z"
+  },
+  "progress": 20,
+  "hoursLogged": 10,
+  "targetQuantity": 8,
+  "completedQuantity": 0,
+  "monthCycle": "2026-10",
+  "proofAttachments": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c3"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "owner": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "ownerName": "Mohammad Ali",
+  "title": "Server Migration",
+  "desc": "Migrate infrastructure to new cloud provider",
+  "category": "Field Visit",
+  "priority": "Critical",
+  "status": "Draft",
+  "due": {
+    "$date": "2026-10-30T00:00:00.000Z"
+  },
+  "progress": 10,
+  "hoursLogged": 5,
+  "targetQuantity": 3,
+  "completedQuantity": 0,
+  "monthCycle": "2026-10",
+  "proofAttachments": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "owner": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "ownerName": "Karim Hossain",
+  "title": "Client Site Inspection",
+  "desc": "Visit the Uttara client site and document requirements",
+  "category": "Field Visit",
+  "priority": "Medium",
+  "status": "Draft",
+  "due": {
+    "$date": "2026-10-20T00:00:00.000Z"
+  },
+  "progress": 40,
+  "hoursLogged": 3,
+  "targetQuantity": 1,
+  "completedQuantity": 0,
+  "monthCycle": "2026-10",
+  "proofAttachments": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c5"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "owner": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "ownerName": "Karim Hossain",
+  "title": "Weekly Sales Follow-ups",
+  "desc": "Call pending leads and update the CRM pipeline",
+  "category": "Sales",
+  "priority": "Low",
+  "status": "Draft",
+  "due": {
+    "$date": "2026-10-25T00:00:00.000Z"
+  },
+  "progress": 60,
+  "hoursLogged": 6,
+  "targetQuantity": 15,
+  "completedQuantity": 9,
+  "monthCycle": "2026-10",
+  "proofAttachments": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "owner": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "ownerName": "Charlie Brown",
+  "title": "Frontend Bug Triage",
+  "desc": "Reproduce and triage open frontend issues from the tracker",
+  "category": "Admin",
+  "priority": "Medium",
+  "status": "Draft",
+  "due": {
+    "$date": "2026-10-18T00:00:00.000Z"
+  },
+  "progress": 25,
+  "hoursLogged": 2,
+  "targetQuantity": 10,
+  "completedQuantity": 3,
+  "monthCycle": "2026-10",
+  "proofAttachments": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.274Z"
+  }
+}]

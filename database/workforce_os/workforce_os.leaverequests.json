@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e289"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "applicantName": "Jane Smith",
+  "dept": "Engineering",
+  "type": "Sick",
+  "startDate": {
+    "$date": "2026-10-10T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2026-10-12T00:00:00.000Z"
+  },
+  "days": 3,
+  "duration": "3 working days",
+  "reason": "Flu",
+  "status": "Pending Manager",
+  "appliedAt": {
+    "$date": "2026-10-11T07:02:48.570Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.571Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.571Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e28a"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "applicantName": "Rahman Islam",
+  "dept": "Human Resources",
+  "type": "Casual",
+  "startDate": {
+    "$date": "2026-10-20T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2026-10-22T00:00:00.000Z"
+  },
+  "days": 3,
+  "duration": "3 working days",
+  "reason": "Family event",
+  "status": "Pending Manager",
+  "appliedAt": {
+    "$date": "2026-10-11T07:02:48.570Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.571Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.571Z"
+  }
+}]

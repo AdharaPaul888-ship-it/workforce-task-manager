@@ -1,0 +1,260 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e28b"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 2,
+  "sickTotal": 7,
+  "sickUsed": 2,
+  "annualTotal": 15,
+  "annualUsed": 1,
+  "unpaidUsed": 0,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e28c"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 4,
+  "sickTotal": 7,
+  "sickUsed": 0,
+  "annualTotal": 15,
+  "annualUsed": 3,
+  "unpaidUsed": 0,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e28d"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 2,
+  "sickTotal": 7,
+  "sickUsed": 0,
+  "annualTotal": 15,
+  "annualUsed": 4,
+  "unpaidUsed": 0,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e28e"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 2,
+  "sickTotal": 7,
+  "sickUsed": 0,
+  "annualTotal": 15,
+  "annualUsed": 3,
+  "unpaidUsed": 1,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e28f"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 3,
+  "sickTotal": 7,
+  "sickUsed": 0,
+  "annualTotal": 15,
+  "annualUsed": 0,
+  "unpaidUsed": 0,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e290"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 3,
+  "sickTotal": 7,
+  "sickUsed": 2,
+  "annualTotal": 15,
+  "annualUsed": 0,
+  "unpaidUsed": 1,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e291"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 3,
+  "sickTotal": 7,
+  "sickUsed": 2,
+  "annualTotal": 15,
+  "annualUsed": 2,
+  "unpaidUsed": 1,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e292"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 2,
+  "sickTotal": 7,
+  "sickUsed": 0,
+  "annualTotal": 15,
+  "annualUsed": 0,
+  "unpaidUsed": 0,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.598Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.598Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e293"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 2,
+  "sickTotal": 7,
+  "sickUsed": 1,
+  "annualTotal": 15,
+  "annualUsed": 1,
+  "unpaidUsed": 1,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.598Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.598Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e294"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "year": 2026,
+  "casualTotal": 10,
+  "casualUsed": 4,
+  "sickTotal": 7,
+  "sickUsed": 2,
+  "annualTotal": 15,
+  "annualUsed": 2,
+  "unpaidUsed": 0,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.598Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.598Z"
+  }
+}]

@@ -1,0 +1,298 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2fb"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "taskTitle": "Website Redesign",
+  "startedAt": {
+    "$date": "2026-10-11T07:02:48.789Z"
+  },
+  "accumulatedSeconds": 0,
+  "running": false,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.789Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.789Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2fc"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "taskTitle": "API Optimization",
+  "startedAt": {
+    "$date": "2026-10-11T03:07:06.797Z"
+  },
+  "lastResumedAt": {
+    "$date": "2026-10-11T07:02:48.797Z"
+  },
+  "accumulatedSeconds": 14142,
+  "running": true,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.797Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.797Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2fd"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c6"
+  },
+  "taskTitle": "Frontend Bug Triage",
+  "startedAt": {
+    "$date": "2026-10-11T03:15:22.807Z"
+  },
+  "lastResumedAt": {
+    "$date": "2026-10-11T07:02:48.807Z"
+  },
+  "accumulatedSeconds": 13646,
+  "running": true,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.808Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.808Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2fe"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0be"
+  },
+  "taskTitle": "Website Redesign",
+  "startedAt": {
+    "$date": "2026-10-11T07:02:48.817Z"
+  },
+  "accumulatedSeconds": 0,
+  "running": false,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.817Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.817Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2ff"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c1"
+  },
+  "taskTitle": "API Optimization",
+  "startedAt": {
+    "$date": "2026-10-11T04:35:22.824Z"
+  },
+  "lastResumedAt": {
+    "$date": "2026-10-11T07:02:48.824Z"
+  },
+  "accumulatedSeconds": 8846,
+  "running": true,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.824Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.824Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e300"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c3"
+  },
+  "taskTitle": "Server Migration",
+  "startedAt": {
+    "$date": "2026-10-11T03:27:08.832Z"
+  },
+  "lastResumedAt": {
+    "$date": "2026-10-11T07:02:48.832Z"
+  },
+  "accumulatedSeconds": 12940,
+  "running": true,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.832Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.832Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e301"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c4"
+  },
+  "taskTitle": "Client Site Inspection",
+  "startedAt": {
+    "$date": "2026-10-11T07:02:48.840Z"
+  },
+  "accumulatedSeconds": 0,
+  "running": false,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.841Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e302"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c5"
+  },
+  "taskTitle": "Weekly Sales Follow-ups",
+  "startedAt": {
+    "$date": "2026-10-11T05:23:19.849Z"
+  },
+  "lastResumedAt": {
+    "$date": "2026-10-11T07:02:48.849Z"
+  },
+  "accumulatedSeconds": 5969,
+  "running": true,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.849Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.849Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e303"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c2"
+  },
+  "taskTitle": "Mobile App Beta",
+  "startedAt": {
+    "$date": "2026-10-11T06:02:46.857Z"
+  },
+  "lastResumedAt": {
+    "$date": "2026-10-11T07:02:48.857Z"
+  },
+  "accumulatedSeconds": 3602,
+  "running": true,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.857Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.857Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e304"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "task": {
+    "$oid": "6acb3498669147c153e1e0c3"
+  },
+  "taskTitle": "Server Migration",
+  "startedAt": {
+    "$date": "2026-10-11T07:02:48.864Z"
+  },
+  "accumulatedSeconds": 0,
+  "running": false,
+  "idleDiscardedSeconds": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.865Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.865Z"
+  },
+  "__v": 0
+}]

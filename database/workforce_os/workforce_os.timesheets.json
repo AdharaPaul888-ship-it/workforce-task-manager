@@ -1,0 +1,380 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f1"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "userName": "John Doe",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.707Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.707Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f2"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "userName": "Jane Smith",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.718Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.718Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f3"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "userName": "Bob Johnson",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.727Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.727Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f4"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "userName": "Alice Williams",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.736Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.736Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f5"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "userName": "Charlie Brown",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.743Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.743Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "userName": "Sarah Khan",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.750Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.750Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f7"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "userName": "Mohammad Ali",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.757Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.757Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f8"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "userName": "Fatima Ahmed",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.763Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.763Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2f9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "userName": "Rahman Islam",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.771Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.771Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e2fa"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "userName": "Karim Hossain",
+  "weekStart": {
+    "$date": "2026-10-07T00:00:00.000Z"
+  },
+  "weekEnd": {
+    "$date": "2026-10-13T00:00:00.000Z"
+  },
+  "weekLabel": "Week 40",
+  "dailyHours": {
+    "mon": 8,
+    "tue": 7.5,
+    "wed": 9,
+    "thu": 8,
+    "fri": 7.5,
+    "sat": 0,
+    "sun": 0
+  },
+  "totalHours": 40,
+  "status": "Submitted",
+  "idleFlags": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.780Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.780Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,33 @@
+ROLES = [
+  "Super Admin",
+  "Admin",
+  "HR",
+  "Manager",
+  "Member",
+]
+
+PERMISSIONS = {
+  dashboard_view_stats: "dashboard.view_stats",
+  dashboard_view_team: "dashboard.view_team",
+  dashboard_payroll_overview: "dashboard.payroll_overview",
+  timelog_record: "timelog.record",
+  timelog_manual_entry: "timelog.manual_entry",
+  timelog_approve: "timelog.approve",
+  leave_request: "leave.request",
+  leave_approve: "leave.approve",
+  holiday_manage: "holiday.manage",
+  tasks_view: "tasks.view",
+  tasks_create: "tasks.create",
+  tasks_approve: "tasks.approve",
+  presets_manage: "presets.manage",
+  reports_user_log: "reports.user_log",
+  org_manage: "org.manage",
+  roles_manage: "roles.manage",
+  settings_manage: "settings.manage",
+  attendance_punch: "attendance.punch",
+  attendance_manage: "attendance.manage",
+  monthly_plan_manage: "monthly_plan.manage",
+  payroll_view_own: "payroll.view_own",
+  payroll_process: "payroll.process",
+  tenant_switch: "tenant.switch",
+}

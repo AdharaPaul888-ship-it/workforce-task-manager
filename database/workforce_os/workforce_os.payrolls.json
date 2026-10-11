@@ -1,0 +1,320 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e305"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "employeeName": "John Doe",
+  "empCode": "EMP-7732",
+  "dept": "Executive",
+  "month": "2026-09",
+  "baseSalary": 15000,
+  "presentDays": 23,
+  "absentDays": 0,
+  "leaveDays": 4,
+  "bonus": 538.96,
+  "deductions": 317.72,
+  "overtimeHours": 1,
+  "netSalary": 15221.24,
+  "paymentMethod": "Cash",
+  "status": "Draft",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.874Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.874Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e306"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "employeeName": "Jane Smith",
+  "empCode": "EMP-2191",
+  "dept": "Engineering",
+  "month": "2026-10",
+  "baseSalary": 15000,
+  "presentDays": 19,
+  "absentDays": 0,
+  "leaveDays": 2,
+  "bonus": 756.27,
+  "deductions": 24.73,
+  "overtimeHours": 7.3,
+  "netSalary": 15731.54,
+  "paymentMethod": "Direct Deposit",
+  "status": "Calculated",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.882Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.882Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e307"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "employeeName": "Bob Johnson",
+  "empCode": "EMP-3314",
+  "dept": "Engineering",
+  "month": "2026-11",
+  "baseSalary": 15000,
+  "presentDays": 23,
+  "absentDays": 0,
+  "leaveDays": 1,
+  "bonus": 182.92,
+  "deductions": 180.63,
+  "overtimeHours": 0.9,
+  "netSalary": 15002.29,
+  "paymentMethod": "Cash",
+  "status": "Draft",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.890Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.890Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e308"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "employeeName": "Alice Williams",
+  "empCode": "EMP-2670",
+  "dept": "Human Resources",
+  "month": "2026-09",
+  "baseSalary": 15000,
+  "presentDays": 10,
+  "absentDays": 7,
+  "leaveDays": 3,
+  "bonus": 211.77,
+  "deductions": 33.1,
+  "overtimeHours": 0.3,
+  "netSalary": 15178.67,
+  "paymentMethod": "Check",
+  "status": "Disbursed",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.898Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.898Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e309"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "employeeName": "Charlie Brown",
+  "empCode": "EMP-2545",
+  "dept": "Engineering",
+  "month": "2026-10",
+  "baseSalary": 15000,
+  "presentDays": 27,
+  "absentDays": 0,
+  "leaveDays": 3,
+  "bonus": 837.19,
+  "deductions": 454.01,
+  "overtimeHours": 14.5,
+  "netSalary": 15383.18,
+  "paymentMethod": "Direct Deposit",
+  "status": "Calculated",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.905Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e30a"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "employeeName": "Sarah Khan",
+  "empCode": "EMP-1727",
+  "dept": "Executive",
+  "month": "2026-11",
+  "baseSalary": 15000,
+  "presentDays": 15,
+  "absentDays": 1,
+  "leaveDays": 4,
+  "bonus": 701.05,
+  "deductions": 73.72,
+  "overtimeHours": 14.9,
+  "netSalary": 15627.33,
+  "paymentMethod": "Cash",
+  "status": "Calculated",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.913Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.913Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e30b"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "employeeName": "Mohammad Ali",
+  "empCode": "EMP-4640",
+  "dept": "Development",
+  "month": "2026-09",
+  "baseSalary": 15000,
+  "presentDays": 22,
+  "absentDays": 0,
+  "leaveDays": 1,
+  "bonus": 181.9,
+  "deductions": 481.69,
+  "overtimeHours": 8.5,
+  "netSalary": 14700.21,
+  "paymentMethod": "Check",
+  "status": "Draft",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.921Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.921Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e30c"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "employeeName": "Fatima Ahmed",
+  "empCode": "EMP-7288",
+  "dept": "Development",
+  "month": "2026-10",
+  "baseSalary": 15000,
+  "presentDays": 15,
+  "absentDays": 3,
+  "leaveDays": 2,
+  "bonus": 341.55,
+  "deductions": 301.87,
+  "overtimeHours": 5.4,
+  "netSalary": 15039.67,
+  "paymentMethod": "Direct Deposit",
+  "status": "Draft",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.926Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.926Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e30d"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "employeeName": "Rahman Islam",
+  "empCode": "EMP-8761",
+  "dept": "Human Resources",
+  "month": "2026-11",
+  "baseSalary": 15000,
+  "presentDays": 23,
+  "absentDays": 0,
+  "leaveDays": 2,
+  "bonus": 748.76,
+  "deductions": 131.39,
+  "overtimeHours": 2.6,
+  "netSalary": 15617.38,
+  "paymentMethod": "Check",
+  "status": "Disbursed",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.934Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.934Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e30e"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "user": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "employeeName": "Karim Hossain",
+  "empCode": "EMP-5771",
+  "dept": "Development",
+  "month": "2026-09",
+  "baseSalary": 15000,
+  "presentDays": 22,
+  "absentDays": 0,
+  "leaveDays": 1,
+  "bonus": 394.48,
+  "deductions": 278.73,
+  "overtimeHours": 11.7,
+  "netSalary": 15115.75,
+  "paymentMethod": "Cash",
+  "status": "Disbursed",
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.940Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.940Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,88 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c7"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "Daily Standup",
+  "category": "Admin",
+  "freq": "Daily",
+  "target": 1,
+  "role": "Member",
+  "proofType": "photo",
+  "status": "Published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.282Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c8"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "Weekly Report",
+  "category": "Admin",
+  "freq": "Weekly",
+  "target": 1,
+  "role": "Member",
+  "proofType": "document",
+  "status": "Published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.282Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0c9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Daily Standup",
+  "category": "Service",
+  "freq": "Daily",
+  "target": 1,
+  "role": "Member",
+  "proofType": "photo",
+  "status": "Published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.282Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0ca"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Weekly Report",
+  "category": "Service",
+  "freq": "Weekly",
+  "target": 1,
+  "role": "Member",
+  "proofType": "document",
+  "status": "Published",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.282Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.282Z"
+  }
+}]

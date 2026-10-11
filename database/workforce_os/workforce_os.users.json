@@ -1,0 +1,238 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a2"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "John Doe",
+  "email": "john@apex.com",
+  "password": "password123",
+  "role": "Super Admin",
+  "department": "Executive",
+  "team": "Leadership",
+  "empCode": "EMP-0001",
+  "baseSalary": 20000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.228Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.228Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a3"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "Jane Smith",
+  "email": "jane@apex.com",
+  "password": "password123",
+  "role": "Admin",
+  "department": "Engineering",
+  "team": "Backend",
+  "empCode": "EMP-0002",
+  "baseSalary": 18000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a4"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "Bob Johnson",
+  "email": "bob@apex.com",
+  "password": "password123",
+  "role": "Manager",
+  "department": "Engineering",
+  "team": "Frontend",
+  "empCode": "EMP-0003",
+  "baseSalary": 15000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a5"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "Alice Williams",
+  "email": "alice@apex.com",
+  "password": "password123",
+  "role": "HR",
+  "department": "Human Resources",
+  "empCode": "EMP-0004",
+  "baseSalary": 12000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "Charlie Brown",
+  "email": "charlie@apex.com",
+  "password": "password123",
+  "role": "Member",
+  "department": "Engineering",
+  "team": "Frontend",
+  "empCode": "EMP-0005",
+  "baseSalary": 10000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a7"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Sarah Khan",
+  "email": "sarah@techbd.com",
+  "password": "password123",
+  "role": "Super Admin",
+  "department": "Executive",
+  "team": "Leadership",
+  "empCode": "EMP-0006",
+  "baseSalary": 20000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a8"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Mohammad Ali",
+  "email": "mohammad@techbd.com",
+  "password": "password123",
+  "role": "Admin",
+  "department": "Development",
+  "team": "Backend",
+  "empCode": "EMP-0007",
+  "baseSalary": 18000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Fatima Ahmed",
+  "email": "fatima@techbd.com",
+  "password": "password123",
+  "role": "Manager",
+  "department": "Development",
+  "team": "Frontend",
+  "empCode": "EMP-0008",
+  "baseSalary": 15000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0aa"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Rahman Islam",
+  "email": "rahman@techbd.com",
+  "password": "password123",
+  "role": "HR",
+  "department": "Human Resources",
+  "empCode": "EMP-0009",
+  "baseSalary": 12000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0ab"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Karim Hossain",
+  "email": "karim@techbd.com",
+  "password": "password123",
+  "role": "Member",
+  "department": "Development",
+  "team": "Backend",
+  "empCode": "EMP-0010",
+  "baseSalary": 10000,
+  "isActive": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.229Z"
+  }
+}]

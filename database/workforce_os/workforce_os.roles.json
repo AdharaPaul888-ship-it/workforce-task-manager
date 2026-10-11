@@ -1,0 +1,271 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0ac"
+  },
+  "tenant": "6acb3498669147c153e1e0a0",
+  "scope": "tenant",
+  "isSystem": true,
+  "name": "Super Admin",
+  "guard": "api",
+  "permissions": [
+    "*"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.242Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.242Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0ad"
+  },
+  "tenant": "6acb3498669147c153e1e0a0",
+  "scope": "tenant",
+  "isSystem": true,
+  "name": "Admin",
+  "guard": "api",
+  "permissions": [
+    "dashboard.view_stats",
+    "dashboard.view_team",
+    "dashboard.payroll_overview",
+    "timelog.record",
+    "timelog.manual_entry",
+    "timelog.approve",
+    "leave.request",
+    "leave.approve",
+    "holiday.manage",
+    "tasks.view",
+    "tasks.create",
+    "tasks.approve",
+    "presets.manage",
+    "reports.user_log",
+    "org.manage",
+    "roles.manage",
+    "settings.manage",
+    "tenant.switch"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.243Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.243Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0ae"
+  },
+  "tenant": "6acb3498669147c153e1e0a0",
+  "scope": "tenant",
+  "isSystem": true,
+  "name": "HR",
+  "guard": "api",
+  "permissions": [
+    "dashboard.view_stats",
+    "dashboard.view_team",
+    "timelog.record",
+    "timelog.manual_entry",
+    "leave.request",
+    "leave.approve",
+    "holiday.manage",
+    "reports.user_log"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.243Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.243Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0af"
+  },
+  "tenant": "6acb3498669147c153e1e0a0",
+  "scope": "team",
+  "isSystem": true,
+  "name": "Manager",
+  "guard": "api",
+  "permissions": [
+    "dashboard.view_stats",
+    "dashboard.view_team",
+    "timelog.record",
+    "timelog.manual_entry",
+    "timelog.approve",
+    "leave.request",
+    "leave.approve",
+    "tasks.view",
+    "tasks.create",
+    "tasks.approve"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.243Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.243Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0b0"
+  },
+  "tenant": "6acb3498669147c153e1e0a0",
+  "scope": "self",
+  "isSystem": true,
+  "name": "Member",
+  "guard": "api",
+  "permissions": [
+    "dashboard.view_stats",
+    "timelog.record",
+    "timelog.manual_entry",
+    "leave.request"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.243Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.243Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0b1"
+  },
+  "tenant": "6acb3498669147c153e1e0a1",
+  "scope": "tenant",
+  "isSystem": true,
+  "name": "Super Admin",
+  "guard": "api",
+  "permissions": [
+    "*"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0b2"
+  },
+  "tenant": "6acb3498669147c153e1e0a1",
+  "scope": "tenant",
+  "isSystem": true,
+  "name": "Admin",
+  "guard": "api",
+  "permissions": [
+    "dashboard.view_stats",
+    "dashboard.view_team",
+    "dashboard.payroll_overview",
+    "timelog.record",
+    "timelog.manual_entry",
+    "timelog.approve",
+    "leave.request",
+    "leave.approve",
+    "holiday.manage",
+    "tasks.view",
+    "tasks.create",
+    "tasks.approve",
+    "presets.manage",
+    "reports.user_log",
+    "org.manage",
+    "roles.manage",
+    "settings.manage",
+    "tenant.switch"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0b3"
+  },
+  "tenant": "6acb3498669147c153e1e0a1",
+  "scope": "tenant",
+  "isSystem": true,
+  "name": "HR",
+  "guard": "api",
+  "permissions": [
+    "dashboard.view_stats",
+    "timelog.record",
+    "timelog.manual_entry",
+    "leave.request",
+    "leave.approve",
+    "holiday.manage",
+    "reports.user_log"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0b4"
+  },
+  "tenant": "6acb3498669147c153e1e0a1",
+  "scope": "team",
+  "isSystem": true,
+  "name": "Manager",
+  "guard": "api",
+  "permissions": [
+    "dashboard.view_stats",
+    "dashboard.view_team",
+    "timelog.record",
+    "timelog.manual_entry",
+    "timelog.approve",
+    "leave.request",
+    "leave.approve",
+    "tasks.view",
+    "tasks.create",
+    "tasks.approve"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0b5"
+  },
+  "tenant": "6acb3498669147c153e1e0a1",
+  "scope": "self",
+  "isSystem": true,
+  "name": "Member",
+  "guard": "api",
+  "permissions": [
+    "dashboard.view_stats",
+    "timelog.record",
+    "timelog.manual_entry",
+    "leave.request"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.244Z"
+  }
+}]

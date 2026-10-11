@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "APEX Solutions",
+  "code": "APEX",
+  "domain": "apex.example.com",
+  "currency": "USD",
+  "timezone": "America/New_York",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.207Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.207Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Technologies Ltd",
+  "code": "TECH-BD",
+  "domain": "techbd.example.com",
+  "currency": "BDT",
+  "timezone": "Asia/Dhaka",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.208Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.208Z"
+  }
+}]

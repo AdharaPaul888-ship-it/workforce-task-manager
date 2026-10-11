@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0cb"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "title": "New Year's Day",
+  "date": {
+    "$date": "2026-01-01T00:00:00.000Z"
+  },
+  "type": "National",
+  "description": "Celebration of New Year",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0cc"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "title": "Independence Day",
+  "date": {
+    "$date": "2026-07-04T00:00:00.000Z"
+  },
+  "type": "National",
+  "description": "Independence Day celebration",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0cd"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "title": "Thanksgiving",
+  "date": {
+    "$date": "2026-11-26T00:00:00.000Z"
+  },
+  "type": "National",
+  "description": "Thanksgiving holiday",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0ce"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "title": "Pohela Boishakh",
+  "date": {
+    "$date": "2026-04-14T00:00:00.000Z"
+  },
+  "type": "National",
+  "description": "Bengali New Year",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0cf"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "title": "Eid ul-Fitr",
+  "date": {
+    "$date": "2026-04-21T00:00:00.000Z"
+  },
+  "type": "Religious",
+  "description": "End of Ramadan",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0d0"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "title": "Victory Day",
+  "date": {
+    "$date": "2026-12-16T00:00:00.000Z"
+  },
+  "type": "National",
+  "description": "Victory Day commemorations",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.289Z"
+  }
+}]

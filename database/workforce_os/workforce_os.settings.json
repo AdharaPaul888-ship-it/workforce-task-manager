@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e30f"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "idleThresholdSeconds": 60,
+  "defaultWorkingHours": 8,
+  "officeStartTime": "09:00",
+  "lateGraceMinutes": 15,
+  "monthlySubmissionDay": 25,
+  "approvalWindowDay": 28,
+  "overtimeRateMultiplier": 1.5,
+  "workingDays": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "deductionFormula": "salary × (presentDays − absentDays − leaveDays) / presentDays + overtimeRate × overtimeHours",
+  "leaveAllowance": {
+    "casual": 10,
+    "sick": 7,
+    "annual": 15
+  },
+  "sickCertificateAfterDays": 1,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.944Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.944Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e310"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "idleThresholdSeconds": 60,
+  "defaultWorkingHours": 8,
+  "officeStartTime": "09:00",
+  "lateGraceMinutes": 15,
+  "monthlySubmissionDay": 25,
+  "approvalWindowDay": 28,
+  "overtimeRateMultiplier": 1.5,
+  "workingDays": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "deductionFormula": "salary × (presentDays − absentDays − leaveDays) / presentDays + overtimeRate × overtimeHours",
+  "leaveAllowance": {
+    "casual": 10,
+    "sick": 7,
+    "annual": 15
+  },
+  "sickCertificateAfterDays": 1,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.948Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.948Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,14 @@
+{
+  "name": "task-manger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run dev",
+    "test": "npm --prefix backend test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

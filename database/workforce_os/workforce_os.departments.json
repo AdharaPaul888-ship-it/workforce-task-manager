@@ -1,0 +1,146 @@
+[{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0b6"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "Engineering",
+  "code": "ENG",
+  "budget": 500000,
+  "hod": "6acb3498669147c153e1e0a2",
+  "hodName": "John Doe",
+  "teams": [
+    {
+      "name": "Backend",
+      "lead": {
+        "$oid": "6acb3498669147c153e1e0a3"
+      },
+      "leadName": "Jane Smith",
+      "members": [
+        {
+          "$oid": "6acb3498669147c153e1e0a3"
+        }
+      ],
+      "_id": {
+        "$oid": "6acb3498669147c153e1e0b7"
+      }
+    },
+    {
+      "name": "Frontend",
+      "lead": {
+        "$oid": "6acb3498669147c153e1e0a4"
+      },
+      "leadName": "Bob Johnson",
+      "members": [
+        {
+          "$oid": "6acb3498669147c153e1e0a4"
+        }
+      ],
+      "_id": {
+        "$oid": "6acb3498669147c153e1e0b8"
+      }
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.261Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0b9"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a0"
+  },
+  "name": "Human Resources",
+  "code": "HR",
+  "budget": 100000,
+  "hod": "6acb3498669147c153e1e0a5",
+  "hodName": "Alice Williams",
+  "teams": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.261Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0ba"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Development",
+  "code": "DEV",
+  "budget": 800000,
+  "hod": "6acb3498669147c153e1e0a7",
+  "hodName": "Sarah Khan",
+  "teams": [
+    {
+      "name": "Backend",
+      "lead": {
+        "$oid": "6acb3498669147c153e1e0a8"
+      },
+      "leadName": "Mohammad Ali",
+      "members": [
+        {
+          "$oid": "6acb3498669147c153e1e0a8"
+        }
+      ],
+      "_id": {
+        "$oid": "6acb3498669147c153e1e0bb"
+      }
+    },
+    {
+      "name": "Frontend",
+      "lead": {
+        "$oid": "6acb3498669147c153e1e0a9"
+      },
+      "leadName": "Fatima Ahmed",
+      "members": [
+        {
+          "$oid": "6acb3498669147c153e1e0a9"
+        }
+      ],
+      "_id": {
+        "$oid": "6acb3498669147c153e1e0bc"
+      }
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.261Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6acb3498669147c153e1e0bd"
+  },
+  "tenant": {
+    "$oid": "6acb3498669147c153e1e0a1"
+  },
+  "name": "Human Resources",
+  "code": "HR",
+  "budget": 100000,
+  "hod": "6acb3498669147c153e1e0aa",
+  "hodName": "Rahman Islam",
+  "teams": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-10-11T07:02:48.261Z"
+  },
+  "updatedAt": {
+    "$date": "2026-10-11T07:02:48.261Z"
+  }
+}]
