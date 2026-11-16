@@ -17,6 +17,9 @@ const userLogRoutes = require("./routes/user-log");
 const dashboardRoutes = require("./routes/dashboard");
 const notificationRoutes = require("./routes/notifications");
 const attendanceRoutes = require("./routes/attendance");
+const recruitmentRoutes = require("./routes/recruitment");
+const monthlyPlanRoutes = require("./routes/monthly-plans");
+const performanceRoutes = require("./routes/performance");
 const User = require("./models/User");
 const jwt = require("jsonwebtoken");
 const generateToken = require("./utils/generateToken");
@@ -348,6 +351,10 @@ app.use("/api/reports", userLogRoutes); // /reports/user-log
 app.use("/api/dashboard", dashboardRoutes); // /dashboard/stats
 app.use("/api/notifications", notificationRoutes); // /notifications
 app.use("/api/attendance", attendanceRoutes); // /attendance
+app.use("/api/recruitment", recruitmentRoutes); // /recruitment/*
+app.use("/api/monthly-plans", monthlyPlanRoutes); // /monthly-plans
+app.use("/api/monthly-planning", monthlyPlanRoutes); // /monthly-planning alias
+app.use("/api/performance", performanceRoutes); // /performance/goals, /kpis, /reviews, /feedback, /appraisals
 
 // 404 handler - only reached if no route above matched
 app.use(notFound);
