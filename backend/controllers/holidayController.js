@@ -18,12 +18,15 @@ exports.getHolidays = async (req, res) => {
 
 exports.createHoliday = async (req, res) => {
   const { title, date, type, description } = req.body;
+  const d = new Date(date);
+  const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const holiday = new Holiday({
     tenant: req.tenantId,
     title,
-    date: new Date(date),
-    type,
+    date: d,
+    type: type || "National",
     description,
+    day: dayNames[d.getDay()],
   });
   await holiday.save();
   res.json({ success: true, data: holiday });
@@ -52,29 +55,55 @@ exports.deleteHoliday = async (req, res) => {
 exports.getLeaveRequests = async (req, res) => {
   const { scope, status, year } = req.query;
   let filter = { tenant: req.tenantId };
-  if (scope === "mine") filter.user = req.user._id;
-  else if (scope === "pending") filter.status = "Pending Manager";
+  if (scope === "mine") {
+    filter.user = req.user._id;
+  } else if (scope === "pending") {
+    filter.status = { $in: ["Pending Manager", "Pending HR"] };
+    // If user is a Manager (not Admin or HR), restrict to only their reporting team members
+    if (req.user.role === "Manager") {
+      const reportingUsers = await User.find({ tenant: req.tenantId, manager: req.user._id }).distinct("_id");
+      filter.user = { $in: reportingUsers };
+    }
+  }
   if (status) filter.status = status;
   if (year) {
     const startOfYear = new Date(`${year}-01-01`);
     const endOfYear = new Date(`${year}-12-31`);
     filter.startDate = { $gte: startOfYear, $lte: endOfYear };
   }
-  const leaves = await LeaveRequest.find(filter).populate("user", "name email role").lean();
+  const leaves = await LeaveRequest.find(filter)
+    .populate("user", "name email role")
+    .sort({ createdAt: -1 })
+    .lean();
   res.json({ success: true, data: leaves });
 };
 
 exports.createLeaveRequest = async (req, res) => {
   const { type, startDate, endDate, halfDay, reason, certificate } = req.body;
   const user = req.user;
+  const leaveYear = new Date(startDate).getFullYear();
   
-  // Get leave balance
-  const balance = await LeaveBalance.findOne({ user: user._id, tenant: user.tenant, year: new Date(startDate).getFullYear() });
-  if (!balance) return res.status(400).json({ success: false, message: "Leave balance not found for this year" });
+  // Get leave balance or create if not present
+  let balance = await LeaveBalance.findOne({ user: user._id, tenant: user.tenant, year: leaveYear });
+  if (!balance) {
+    balance = await LeaveBalance.create({
+      tenant: user.tenant,
+      user: user._id,
+      year: leaveYear,
+      casualTotal: 10,
+      casualUsed: 0,
+      sickTotal: 7,
+      sickUsed: 0,
+      annualTotal: 15,
+      annualUsed: 0,
+    });
+  }
   
   // Calculate working days
   const workingDays = workingDaysBetween(new Date(startDate), new Date(endDate), user.tenant);
-  const days = workingDays.filter((w) => !w.isHoliday).length;
+  let days = workingDays.filter((w) => !w.isHoliday).length;
+  if (halfDay) days = 0.5;
+  else if (days === 0) days = 1;
   
   // Check balance
   if (type === "Sick" && balance.sickUsed + days > balance.sickTotal && !halfDay) {
@@ -91,12 +120,12 @@ exports.createLeaveRequest = async (req, res) => {
   const overlapping = await LeaveRequest.findOne({
     tenant: user.tenant,
     user: user._id,
-    status: "Approved",
+    status: { $in: ["Approved", "Pending Manager", "Pending HR"] },
     $or: [
-      { startDate: { $lte: endDate }, endDate: { $gte: startDate } },
+      { startDate: { $lte: new Date(endDate) }, endDate: { $gte: new Date(startDate) } },
     ],
   });
-  if (overlapping) return res.status(400).json({ success: false, message: "Overlaps with your own approved leave" });
+  if (overlapping) return res.status(400).json({ success: false, message: "Overlaps with another leave request" });
   
   const leaveRequest = new LeaveRequest({
     tenant: user.tenant,
@@ -106,9 +135,9 @@ exports.createLeaveRequest = async (req, res) => {
     startDate: new Date(startDate),
     endDate: new Date(endDate),
     days,
-    duration: days + " working days",
+    duration: `${days} working day${days > 1 ? "s" : ""}`,
     reason,
-    certificate,
+    certificateAttachment: certificate,
     status: user.manager ? "Pending Manager" : "Pending HR",
   });
   
@@ -124,22 +153,25 @@ exports.updateLeaveStatus = async (req, res) => {
   
   // Only manager/HR/admin can approve
   if (req.user.role !== "Super Admin" && req.user._id.toString() !== leave.user.toString() && req.user.role !== "HR" && req.user.role !== "Admin") {
-    // Check if user is the manager
     const user = await User.findById(leave.user);
-    if (!user || user.manager.toString() !== req.user._id.toString()) {
+    if (!user || !user.manager || user.manager.toString() !== req.user._id.toString()) {
       return res.status(403).json({ success: false, message: "Not authorized to approve this leave" });
     }
   }
   
   leave.status = status;
   if (remarks) leave.remarks = remarks;
+  if (status === "Approved") {
+    leave.approvedBy = req.user._id;
+    leave.approvedByName = req.user.name;
+  }
   await leave.save();
   
   // If approved, deduct from balance
   if (status === "Approved") {
-    const balance = await LeaveBalance.findOne({ user: leave.user, tenant: leave.tenant, year: new Date(leave.startDate).getFullYear() });
+    let balance = await LeaveBalance.findOne({ user: leave.user, tenant: leave.tenant, year: new Date(leave.startDate).getFullYear() });
     if (balance) {
-      const days = leave.days;
+      const days = leave.days || 1;
       if (leave.type === "Sick") balance.sickUsed = Math.min(balance.sickTotal, balance.sickUsed + days);
       if (leave.type === "Casual") balance.casualUsed = Math.min(balance.casualTotal, balance.casualUsed + days);
       if (leave.type === "Annual") balance.annualUsed = Math.min(balance.annualTotal, balance.annualUsed + days);
@@ -152,8 +184,12 @@ exports.updateLeaveStatus = async (req, res) => {
 
 exports.deleteLeave = async (req, res) => {
   const { id } = req.params;
-  const leave = await LeaveRequest.findByIdAndDelete(id);
+  const leave = await LeaveRequest.findById(id);
   if (!leave) return res.status(404).json({ success: false, message: "Leave request not found" });
+  if (req.user.role !== "Super Admin" && req.user.role !== "Admin" && req.user.role !== "HR" && leave.user.toString() !== req.user._id.toString()) {
+    return res.status(403).json({ success: false, message: "Not authorized to delete this leave" });
+  }
+  await LeaveRequest.findByIdAndDelete(id);
   res.json({ success: true, data: {} });
 };
 
@@ -164,7 +200,7 @@ exports.getLeaveBalance = async (req, res) => {
   else filter.user = req.user._id;
   
   const year = new Date().getFullYear();
-  const balance = await LeaveBalance.findOne({ user: filter.user, tenant: req.tenantId, year }).lean();
+  let balance = await LeaveBalance.findOne({ user: filter.user, tenant: req.tenantId, year }).lean();
   
   if (!balance) {
     const newBalance = new LeaveBalance({
@@ -180,34 +216,46 @@ exports.getLeaveBalance = async (req, res) => {
       unpaidUsed: 0,
     });
     await newBalance.save();
-    res.json({ success: true, data: newBalance });
-  } else {
-    res.json({ success: true, data: balance });
+    balance = newBalance.toObject();
   }
+  res.json({ success: true, data: balance });
 };
 
 exports.previewLeave = async (req, res) => {
   const { type, startDate, endDate, halfDay } = req.body;
   const user = req.user;
+  const year = new Date(startDate).getFullYear();
   
-  // Get current balance
-  const balance = await LeaveBalance.findOne({ user: user._id, tenant: user.tenant, year: new Date(startDate).getFullYear() });
-  if (!balance) return res.status(404).json({ success: false, message: "Leave balance not found" });
-  
-  // Calculate working days
-  const workingDays = workingDaysBetween(new Date(startDate), new Date(endDate), user.tenant);
-  const days = workingDays.filter((w) => !w.isHoliday).length;
-  
-  let remaining;
-  if (type === "Sick") {
-    remaining = balance.sickTotal - balance.sickUsed - days;
-  } else if (type === "Casual") {
-    remaining = balance.casualTotal - balance.casualUsed - days;
-  } else {
-    remaining = balance.annualTotal - balance.annualUsed - days;
+  let balance = await LeaveBalance.findOne({ user: user._id, tenant: user.tenant, year });
+  if (!balance) {
+    balance = await LeaveBalance.create({
+      tenant: user.tenant,
+      user: user._id,
+      year,
+      casualTotal: 10,
+      casualUsed: 0,
+      sickTotal: 7,
+      sickUsed: 0,
+      annualTotal: 15,
+      annualUsed: 0,
+    });
   }
   
-  const hasCertificate = type === "Sick" && days > 1; // simplified: after 1 day as per settings
+  const workingDays = workingDaysBetween(new Date(startDate), new Date(endDate), user.tenant);
+  let days = workingDays.filter((w) => !w.isHoliday).length;
+  if (halfDay) days = 0.5;
+  else if (days === 0) days = 1;
+  
+  let remaining = 0;
+  if (type === "Sick") {
+    remaining = Math.max(0, balance.sickTotal - balance.sickUsed - days);
+  } else if (type === "Casual") {
+    remaining = Math.max(0, balance.casualTotal - balance.casualUsed - days);
+  } else if (type === "Annual") {
+    remaining = Math.max(0, balance.annualTotal - balance.annualUsed - days);
+  }
+  
+  const hasCertificate = type === "Sick" && days > 1;
   
   res.json({ success: true, data: { days, remaining, hasCertificate } });
 };
