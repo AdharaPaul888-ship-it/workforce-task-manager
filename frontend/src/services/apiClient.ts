@@ -60,5 +60,21 @@ export const createHoliday = (data: {
 export const deleteHoliday = (id: string) =>
   apiClient.delete(`/holidays/${id}`);
 
+// Time Tracking APIs
+export const getTimeSummary = (userId?: string) =>
+  apiClient.get("/time/summary", { params: userId ? { userId } : {} });
+
+export const getTimeEntries = (params?: { userId?: string; from?: string; to?: string }) =>
+  apiClient.get("/time/entries", { params });
+
+export const getWeeklyTimesheet = (params?: { start?: string; userId?: string }) =>
+  apiClient.get("/time/timesheets/week", { params });
+
+export const updateTimesheetCell = (id: string, data: { day: string; hours: number }) =>
+  apiClient.put(`/time/timesheets/${id}/cell`, data);
+
+export const submitTimesheet = (id: string) =>
+  apiClient.post(`/time/timesheets/${id}/submit`);
+
 export default apiClient;
 export { apiClient };

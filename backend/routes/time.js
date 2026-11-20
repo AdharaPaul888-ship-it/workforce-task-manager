@@ -14,6 +14,7 @@ const {
   approveTimesheet,
   getTimeEntries,
   createTimeEntry,
+  getTimeSummary,
 } = require("../controllers/timeController");
 const { authorize } = require("../middlewares/authorize");
 
@@ -31,5 +32,6 @@ router.get("/timesheets", getTimesheets);
 router.post("/timesheets/:id/approve", approveTimesheet);
 router.get("/entries", getTimeEntries);
 router.post("/entries", createTimeEntry);
+router.get("/summary", getTimeSummary);
 
 module.exports = router;
