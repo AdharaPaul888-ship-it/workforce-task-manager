@@ -5,7 +5,7 @@ import {
   getTimeSummary,
   getWeeklyTimesheet,
   submitTimesheet,
-  getTimeEntries
+  getTimeEntries,
 } from "../services/apiClient";
 
 const Timer: React.FC = () => {
@@ -25,7 +25,7 @@ const Timer: React.FC = () => {
   const [, setTick] = useState(0);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // 2. Time Summaries State
+  // 2. Time Summaries State (Requirement 4)
   const [timeSummary, setTimeSummary] = useState<any>({
     todayHours: 0,
     weekHours: 0,
@@ -35,54 +35,95 @@ const Timer: React.FC = () => {
     taskBreakdown: [],
   });
 
-  // 3. Timesheets State
-  const [timesheet, setTimesheet] = useState<any>(null);
+  // 3. Weekly Timesheets State (Requirement 2)
+  const [timesheetData, setTimesheetData] = useState<any>({
+    timesheet: null,
+    taskRows: [],
+    dailyTotals: { mon: 0, tue: 0, wed: 0, thu: 0, fri: 0, sat: 0, sun: 0 },
+    grandTotal: 0,
+  });
   const [submittingTimesheet, setSubmittingTimesheet] = useState(false);
 
-  // 4. Task-based Time Entries State
+  // 4. Task-based Time Entries State (Requirement 3)
   const [recentEntries, setRecentEntries] = useState<any[]>([]);
   const [loadingHistory, setLoadingHistory] = useState(false);
 
-  // Active Tab View
-  const [activeView, setActiveView] = useState<"timer" | "timesheet" | "entries">("timer");
+  // View Filter Toggle
+  const [activeView, setActiveView] = useState<"all" | "timer" | "timesheet" | "entries">("all");
+
+  // Manual Entry Form State
+  const [showManualModal, setShowManualModal] = useState(false);
+  const [manualForm, setManualForm] = useState({
+    taskId: "",
+    date: new Date().toISOString().split("T")[0],
+    durationHours: "1.0",
+    category: "Work",
+    notes: "",
+  });
 
   const applyTimer = (data: any) => {
     setTimer({
-      running: !!data.running,
-      accumulatedSeconds: data.accumulatedSeconds || 0,
-      lastResumedAt: data.lastResumedAt || null,
-      task: data.task || null,
-      taskTitle: data.taskTitle || null,
+      running: !!data?.running,
+      accumulatedSeconds: data?.accumulatedSeconds || 0,
+      lastResumedAt: data?.lastResumedAt || null,
+      task: data?.task || null,
+      taskTitle: data?.taskTitle || null,
     });
   };
 
   const loadAllTimeData = async () => {
     try {
-      // Load current timer
+      // 1. Load active timer
       const timerResp = await apiClient.get("/time/timer");
-      applyTimer(timerResp.data.data);
+      applyTimer(timerResp.data?.data);
 
-      // Load tasks
+      // 2. Load assigned tasks
       const taskResp = await apiClient.get("/tasks");
-      setTasks(taskResp.data.data || []);
+      setTasks(taskResp.data?.data || []);
 
-      // Load Time Summaries (Requirement 4)
-      const summaryResp = await getTimeSummary();
-      if (summaryResp.data?.data) {
-        setTimeSummary(summaryResp.data.data);
+      // 3. Load Time Summaries (Requirement 4)
+      try {
+        const summaryResp = await getTimeSummary();
+        if (summaryResp.data?.data) {
+          setTimeSummary(summaryResp.data.data);
+        }
+      } catch (e) {
+        console.warn("Summary load fallback:", e);
       }
 
-      // Load Weekly Timesheet (Requirement 2)
-      const sheetResp = await getWeeklyTimesheet();
-      if (sheetResp.data?.data) {
-        setTimesheet(sheetResp.data.data);
+      // 4. Load Weekly Timesheet (Requirement 2)
+      try {
+        const sheetResp = await getWeeklyTimesheet();
+        if (sheetResp.data?.data) {
+          const d = sheetResp.data.data;
+          setTimesheetData({
+            timesheet: d.timesheet || d,
+            taskRows: d.taskRows || [],
+            dailyTotals: d.dailyTotals || d.timesheet?.dailyHours || { mon: 0, tue: 0, wed: 0, thu: 0, fri: 0, sat: 0, sun: 0 },
+            grandTotal: d.grandTotal || d.timesheet?.totalHours || 0,
+          });
+        }
+      } catch (e) {
+        console.warn("Timesheet load fallback:", e);
       }
 
-      // Load Task-Based Entries (Requirement 3)
+      // 5. Load Task-Based Entries (Requirement 3)
       setLoadingHistory(true);
-      const entriesResp = await getTimeEntries();
-      if (entriesResp.data?.data) {
-        setRecentEntries(entriesResp.data.data);
+      try {
+        const entriesResp = await getTimeEntries();
+        if (entriesResp.data?.data) {
+          setRecentEntries(entriesResp.data.data);
+          // If summary didn't return, derive from entries
+          if (!timeSummary.totalEntries && entriesResp.data.summary) {
+            setTimeSummary((prev: any) => ({
+              ...prev,
+              ...entriesResp.data.summary,
+              totalEntries: entriesResp.data.data.length,
+            }));
+          }
+        }
+      } catch (e) {
+        console.warn("Entries load fallback:", e);
       }
       setLoadingHistory(false);
     } catch (err) {
@@ -107,13 +148,14 @@ const Timer: React.FC = () => {
     };
   }, [timer.running]);
 
-  const run = async (fn: () => Promise<any>, onOk: (data: any) => void, errText: string) => {
+  const runAction = async (fn: () => Promise<any>, onOk: (data: any) => void, errText: string) => {
     setMessage(null);
     try {
       const resp = await fn();
-      onOk(resp.data.data);
+      onOk(resp.data?.data);
       refreshBadges();
-      loadAllTimeData();
+      // Reload all time tracking data to ensure tables & summaries update in real-time
+      setTimeout(() => loadAllTimeData(), 400);
     } catch (err: any) {
       setMessage({ kind: "err", text: err.response?.data?.message || errText });
     }
@@ -121,40 +163,43 @@ const Timer: React.FC = () => {
 
   const startTimer = () => {
     if (!taskId || !can("timelog.record")) return;
-    run(
+    runAction(
       () => apiClient.post("/time/timer/start", { taskId }),
       (data) => {
         applyTimer(data);
-        setMessage({ kind: "ok", text: `Timer started for “${data.taskTitle}”` });
+        setMessage({ kind: "ok", text: `Timer started for “${data.taskTitle || "Task"}”` });
       },
       "Failed to start timer"
     );
   };
 
   const pauseTimer = () =>
-    run(
+    runAction(
       () => apiClient.post("/time/timer/pause"),
       (data) => applyTimer(data),
       "Failed to pause timer"
     );
 
   const resumeTimer = () =>
-    run(
+    runAction(
       () => apiClient.post("/time/timer/resume"),
       (data) => applyTimer(data),
       "Failed to resume timer"
     );
 
   const stopTimer = () =>
-    run(
-      () => apiClient.post("/time/timer/stop", { notes: "Logged via workforce timer" }),
+    runAction(
+      () => apiClient.post("/time/timer/stop", { notes: "" }),
       (data) => {
         applyTimer({ running: false, accumulatedSeconds: 0, lastResumedAt: null, task: null, taskTitle: null });
         setTaskId("");
         if (data.discarded) {
           setMessage({ kind: "ok", text: data.message || "Timer under 1 minute, discarded" });
         } else {
-          setMessage({ kind: "ok", text: `Time entry successfully recorded (${data.durationHours} h)` });
+          setMessage({
+            kind: "ok",
+            text: `Time entry successfully recorded (${data.durationHours || "0.0"} hrs) and added to your log below.`,
+          });
         }
         setBadges({ ...badges, timer: { running: false, startedAt: null, accumulatedSeconds: 0 } });
       },
@@ -162,7 +207,7 @@ const Timer: React.FC = () => {
     );
 
   const discardTimer = () =>
-    run(
+    runAction(
       () => apiClient.post("/time/timer/discard"),
       () => {
         applyTimer({ running: false, accumulatedSeconds: 0, lastResumedAt: null, task: null, taskTitle: null });
@@ -173,17 +218,47 @@ const Timer: React.FC = () => {
     );
 
   const handleSubmitTimesheet = async () => {
-    if (!timesheet?._id && !timesheet?.id) return;
+    const sheetId = timesheetData.timesheet?.id || timesheetData.timesheet?._id;
+    if (!sheetId) return;
     setSubmittingTimesheet(true);
     try {
-      const id = timesheet._id || timesheet.id;
-      const resp = await submitTimesheet(id);
-      setTimesheet(resp.data.data);
-      setMessage({ kind: "ok", text: "Timesheet submitted for managerial approval!" });
+      await submitTimesheet(sheetId);
+      setMessage({ kind: "ok", text: "Weekly timesheet submitted for supervisor approval successfully!" });
+      loadAllTimeData();
     } catch (err: any) {
       setMessage({ kind: "err", text: err.response?.data?.message || "Failed to submit timesheet" });
     }
     setSubmittingTimesheet(false);
+  };
+
+  const handleManualSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await apiClient.post("/time/entries", manualForm);
+      setMessage({ kind: "ok", text: "Manual time entry recorded successfully!" });
+      setShowManualModal(false);
+      setManualForm({
+        taskId: "",
+        date: new Date().toISOString().split("T")[0],
+        durationHours: "1.0",
+        category: "Work",
+        notes: "",
+      });
+      loadAllTimeData();
+    } catch (err: any) {
+      setMessage({ kind: "err", text: err.response?.data?.message || "Failed to create manual entry" });
+    }
+  };
+
+  const handleDeleteEntry = async (id: string) => {
+    if (!window.confirm("Are you sure you want to delete this time entry?")) return;
+    try {
+      await apiClient.delete(`/time/entries/${id}`);
+      setMessage({ kind: "ok", text: "Time entry deleted successfully." });
+      loadAllTimeData();
+    } catch (err: any) {
+      setMessage({ kind: "err", text: err.response?.data?.message || "Failed to delete entry" });
+    }
   };
 
   const activeSeconds = (() => {
@@ -203,49 +278,68 @@ const Timer: React.FC = () => {
 
   const timerActive = timer.running || (timer.accumulatedSeconds > 0 && !!timer.task);
 
+  const formatTimeRange = (start?: string, end?: string, dur?: number) => {
+    if (!start && !end) return dur ? `${dur} hrs logged` : "--";
+    try {
+      const s = start ? new Date(start).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : "--";
+      const e = end ? new Date(end).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : "--";
+      return `${s} – ${e}`;
+    } catch {
+      return dur ? `${dur} hrs logged` : "--";
+    }
+  };
+
   return (
     <div className="p-4 max-w-7xl mx-auto space-y-6">
-      {/* Module Banner */}
+      {/* Header Banner */}
       <div className="bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 rounded-xl p-6 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <span className="bg-blue-500/30 text-blue-100 text-xs uppercase px-2.5 py-1 rounded-full font-semibold tracking-wider">
-            Module 1 — Time Tracking
+            Module 1 — Time Tracking System
           </span>
-          <h1 className="text-2xl md:text-3xl font-bold mt-2">Time Tracking & Timesheet Manager</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mt-2">Workforce Time & Timesheet Management</h1>
           <p className="text-blue-100 text-sm mt-1">
-            Working hours stopwatch, weekly timesheets, task-based time entries, and time analytics.
+            Complete time tracking: live stopwatch, weekly timesheet grid, task-based work log history, and productivity analytics.
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <button
-            onClick={() => setActiveView("timer")}
-            className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition ${
-              activeView === "timer"
-                ? "bg-white text-blue-900 shadow-sm"
-                : "bg-blue-600/40 text-white hover:bg-blue-600/60"
+            onClick={() => setActiveView("all")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition ${
+              activeView === "all" ? "bg-white text-blue-900 shadow-sm" : "bg-blue-600/40 text-white hover:bg-blue-600/60"
             }`}
           >
-            ⏱️ Timer & Summaries
+            All-in-One View
+          </button>
+          <button
+            onClick={() => setActiveView("timer")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition ${
+              activeView === "timer" ? "bg-white text-blue-900 shadow-sm" : "bg-blue-600/40 text-white hover:bg-blue-600/60"
+            }`}
+          >
+            ⏱️ Stopwatch
           </button>
           <button
             onClick={() => setActiveView("timesheet")}
-            className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition ${
-              activeView === "timesheet"
-                ? "bg-white text-blue-900 shadow-sm"
-                : "bg-blue-600/40 text-white hover:bg-blue-600/60"
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition ${
+              activeView === "timesheet" ? "bg-white text-blue-900 shadow-sm" : "bg-blue-600/40 text-white hover:bg-blue-600/60"
             }`}
           >
             📅 Weekly Timesheet
           </button>
           <button
             onClick={() => setActiveView("entries")}
-            className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition ${
-              activeView === "entries"
-                ? "bg-white text-blue-900 shadow-sm"
-                : "bg-blue-600/40 text-white hover:bg-blue-600/60"
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition ${
+              activeView === "entries" ? "bg-white text-blue-900 shadow-sm" : "bg-blue-600/40 text-white hover:bg-blue-600/60"
             }`}
           >
-            📋 Time Entries Log
+            📋 Work History
+          </button>
+          <button
+            onClick={() => setShowManualModal(true)}
+            className="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-xs font-semibold transition"
+          >
+            + Manual Entry
           </button>
         </div>
       </div>
@@ -253,9 +347,7 @@ const Timer: React.FC = () => {
       {message && (
         <div
           className={`p-4 rounded-lg text-sm border flex items-center justify-between ${
-            message.kind === "ok"
-              ? "bg-green-50 border-green-200 text-green-800"
-              : "bg-red-50 border-red-200 text-red-800"
+            message.kind === "ok" ? "bg-green-50 border-green-200 text-green-800" : "bg-red-50 border-red-200 text-red-800"
           }`}
         >
           <span>{message.text}</span>
@@ -265,56 +357,80 @@ const Timer: React.FC = () => {
         </div>
       )}
 
-      {/* REQUIREMENT 4: TIME SUMMARIES METRIC CARDS (Always visible) */}
+      {/* ========================================================================= */}
+      {/* 4. TIME SUMMARIES METRIC CARDS (Requirement 4 - Always visible)           */}
+      {/* ========================================================================= */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-            Today's Working Hours
+        {/* Card 1: Today's Hours */}
+        <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow transition">
+          <div className="flex items-center justify-between text-gray-500 mb-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-blue-600">
+              Today's Working Hours
+            </span>
+            <span className="text-lg">☀️</span>
           </div>
-          <div className="text-2xl font-bold text-blue-600 mt-1">
+          <div className="text-3xl font-extrabold text-blue-600">
             {timeSummary.todayHours || 0} <span className="text-sm font-normal text-gray-500">hrs</span>
           </div>
-          <p className="text-[11px] text-gray-400 mt-0.5">Logged today</p>
+          <p className="text-xs text-gray-500 mt-1">Today: {timeSummary.todayHours || 0} hrs recorded</p>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-            This Week's Hours
+        {/* Card 2: This Week's Hours */}
+        <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow transition">
+          <div className="flex items-center justify-between text-gray-500 mb-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-indigo-600">
+              This Week's Hours
+            </span>
+            <span className="text-lg">📅</span>
           </div>
-          <div className="text-2xl font-bold text-indigo-600 mt-1">
+          <div className="text-3xl font-extrabold text-indigo-600">
             {timeSummary.weekHours || 0} <span className="text-sm font-normal text-gray-500">/ 40 hrs</span>
           </div>
-          <div className="w-full bg-gray-100 rounded-full h-1.5 mt-1.5">
+          <div className="w-full bg-gray-100 rounded-full h-2 mt-2 overflow-hidden">
             <div
-              className="bg-indigo-600 h-1.5 rounded-full"
+              className="bg-indigo-600 h-full rounded-full transition-all"
               style={{ width: `${Math.min(100, Math.round(((timeSummary.weekHours || 0) / 40) * 100))}%` }}
             ></div>
           </div>
+          <div className="flex justify-between text-[11px] text-gray-400 mt-1">
+            <span>This Week: {timeSummary.weekHours || 0} hrs</span>
+            <span>{Math.round(((timeSummary.weekHours || 0) / 40) * 100)}% of goal</span>
+          </div>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-            Monthly Logged
+        {/* Card 3: Monthly Logged Hours */}
+        <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow transition">
+          <div className="flex items-center justify-between text-gray-500 mb-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-600">
+              This Month's Hours
+            </span>
+            <span className="text-lg">📈</span>
           </div>
-          <div className="text-2xl font-bold text-emerald-600 mt-1">
+          <div className="text-3xl font-extrabold text-emerald-600">
             {timeSummary.monthHours || 0} <span className="text-sm font-normal text-gray-500">hrs</span>
           </div>
-          <p className="text-[11px] text-gray-400 mt-0.5">Current month cycle</p>
+          <p className="text-xs text-gray-500 mt-1">Current monthly cycle</p>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-            Total Time Entries
+        {/* Card 4: Total Time Entries Recorded */}
+        <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow transition">
+          <div className="flex items-center justify-between text-gray-500 mb-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-purple-600">
+              Recorded Work Sessions
+            </span>
+            <span className="text-lg">📁</span>
           </div>
-          <div className="text-2xl font-bold text-purple-600 mt-1">
+          <div className="text-3xl font-extrabold text-purple-600">
             {timeSummary.totalEntries || recentEntries.length}
           </div>
-          <p className="text-[11px] text-gray-400 mt-0.5">Historical tasks recorded</p>
+          <p className="text-xs text-gray-500 mt-1">Total tasks logged in history</p>
         </div>
       </div>
 
-      {/* VIEW 1: LIVE WORKING HOURS STOPWATCH (Requirement 1) */}
-      {activeView === "timer" && (
+      {/* ========================================================================= */}
+      {/* 1. WORKING HOURS STOPWATCH (Requirement 1)                                */}
+      {/* ========================================================================= */}
+      {(activeView === "all" || activeView === "timer") && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main Stopwatch Widget */}
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm lg:col-span-2 space-y-6">
@@ -324,7 +440,7 @@ const Timer: React.FC = () => {
                   <span>⏱️</span> 1. Working Hours (Live Stopwatch)
                 </h2>
                 <p className="text-xs text-gray-500 mt-0.5">
-                  Start live timer for your task. Stopping creates an entry in your timesheet.
+                  Start live timer for your task. Stopping automatically records an entry in your work log below.
                 </p>
               </div>
               {timerActive && (
@@ -348,7 +464,7 @@ const Timer: React.FC = () => {
                   <option value="">-- Choose a task from your board --</option>
                   {tasks.map((t) => (
                     <option key={t._id || t.id} value={t._id || t.id}>
-                      {t.title} ({t.priority || "Normal"})
+                      {t.title} ({t.priority || "Normal"}) - {t.category || "General"}
                     </option>
                   ))}
                 </select>
@@ -409,7 +525,7 @@ const Timer: React.FC = () => {
             )}
           </div>
 
-          {/* Task-Wise Time Breakdown (Requirement 4 extended) */}
+          {/* Time Summary Breakdown by Task */}
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-4">
             <h3 className="font-semibold text-gray-900 flex items-center gap-2">
               <span>📊</span> Time Summary by Task
@@ -418,7 +534,7 @@ const Timer: React.FC = () => {
               Hours allocated per project task based on your logs.
             </p>
 
-            <div className="space-y-3">
+            <div className="space-y-3 max-h-[280px] overflow-y-auto">
               {timeSummary.taskBreakdown && timeSummary.taskBreakdown.length > 0 ? (
                 timeSummary.taskBreakdown.map((item: any, i: number) => (
                   <div key={i} className="p-3 bg-gray-50 rounded-lg space-y-1">
@@ -433,7 +549,7 @@ const Timer: React.FC = () => {
                 ))
               ) : (
                 <div className="text-center py-8 text-xs text-gray-400">
-                  No task breakdown available yet. Log time using the stopwatch to see statistics.
+                  No task breakdown available yet. Run the stopwatch to generate statistics.
                 </div>
               )}
             </div>
@@ -441,31 +557,33 @@ const Timer: React.FC = () => {
         </div>
       )}
 
-      {/* VIEW 2: WEEKLY TIMESHEETS GRID (Requirement 2) */}
-      {activeView === "timesheet" && (
+      {/* ========================================================================= */}
+      {/* 2. WEEKLY TIMESHEETS GRID (Requirement 2)                                 */}
+      {/* ========================================================================= */}
+      {(activeView === "all" || activeView === "timesheet") && (
         <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 pb-4">
             <div>
               <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                <span>📅</span> 2. Weekly Timesheets
+                <span>📅</span> 2. Weekly Timesheets (Monday to Friday Daily Task Breakdown)
               </h2>
               <p className="text-xs text-gray-500 mt-0.5">
-                Week-by-week aggregated timesheet grid with daily breakdowns and approval status.
+                Daily hours worked on each task across Monday through Friday / Sunday with total hours and supervisor submission.
               </p>
             </div>
             <div className="flex items-center gap-3">
               <span
                 className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                  timesheet?.status === "Approved"
+                  timesheetData.timesheet?.status === "Approved"
                     ? "bg-green-100 text-green-800"
-                    : timesheet?.status === "Submitted"
+                    : timesheetData.timesheet?.status === "Submitted"
                     ? "bg-blue-100 text-blue-800"
                     : "bg-gray-100 text-gray-700"
                 }`}
               >
-                Status: {timesheet?.status || "Draft"}
+                Status: {timesheetData.timesheet?.status || "Draft"}
               </span>
-              {timesheet?.status !== "Submitted" && timesheet?.status !== "Approved" && (
+              {timesheetData.timesheet?.status !== "Submitted" && timesheetData.timesheet?.status !== "Approved" && (
                 <button
                   onClick={handleSubmitTimesheet}
                   disabled={submittingTimesheet}
@@ -477,91 +595,150 @@ const Timer: React.FC = () => {
             </div>
           </div>
 
-          {/* Weekly Timesheet Table */}
+          {/* Weekly Timesheet Table with Per-Task Daily Hours */}
           <div className="overflow-x-auto">
             <table className="w-full text-center text-xs">
               <thead>
                 <tr className="bg-gray-50 text-gray-600 uppercase font-semibold border-b border-gray-200">
-                  <th className="py-3 px-4 text-left">Category / Day</th>
-                  <th className="py-3 px-2">Mon</th>
-                  <th className="py-3 px-2">Tue</th>
-                  <th className="py-3 px-2">Wed</th>
-                  <th className="py-3 px-2">Thu</th>
-                  <th className="py-3 px-2">Fri</th>
-                  <th className="py-3 px-2 text-gray-400">Sat</th>
-                  <th className="py-3 px-2 text-gray-400">Sun</th>
-                  <th className="py-3 px-4 font-bold text-blue-800">Total Hours</th>
+                  <th className="py-3 px-4 text-left">Task Title & Category</th>
+                  <th className="py-3 px-2">Mon (সোম)</th>
+                  <th className="py-3 px-2">Tue (মঙ্গল)</th>
+                  <th className="py-3 px-2">Wed (বুধ)</th>
+                  <th className="py-3 px-2">Thu (বৃহঃ)</th>
+                  <th className="py-3 px-2">Fri (শুক্র)</th>
+                  <th className="py-3 px-2 text-gray-400">Sat (শনি)</th>
+                  <th className="py-3 px-2 text-gray-400">Sun (রবি)</th>
+                  <th className="py-3 px-4 font-bold text-blue-800 bg-blue-50/50">Total Hours (মোট)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr className="hover:bg-gray-50/50">
-                  <td className="py-3 px-4 font-semibold text-left text-gray-800">
-                    Logged Work Hours
+                {timesheetData.taskRows && timesheetData.taskRows.length > 0 ? (
+                  timesheetData.taskRows.map((row: any, idx: number) => (
+                    <tr key={idx} className="hover:bg-gray-50/50">
+                      <td className="py-3 px-4 text-left font-semibold text-gray-800">
+                        <div>{row.taskTitle}</div>
+                        <span className="text-[10px] text-gray-400 font-normal">{row.category || "Work"}</span>
+                      </td>
+                      <td className="py-3 px-2 font-medium text-gray-700">{row.mon > 0 ? `${row.mon}h` : "—"}</td>
+                      <td className="py-3 px-2 font-medium text-gray-700">{row.tue > 0 ? `${row.tue}h` : "—"}</td>
+                      <td className="py-3 px-2 font-medium text-gray-700">{row.wed > 0 ? `${row.wed}h` : "—"}</td>
+                      <td className="py-3 px-2 font-medium text-gray-700">{row.thu > 0 ? `${row.thu}h` : "—"}</td>
+                      <td className="py-3 px-2 font-medium text-gray-700">{row.fri > 0 ? `${row.fri}h` : "—"}</td>
+                      <td className="py-3 px-2 text-gray-400">{row.sat > 0 ? `${row.sat}h` : "—"}</td>
+                      <td className="py-3 px-2 text-gray-400">{row.sun > 0 ? `${row.sun}h` : "—"}</td>
+                      <td className="py-3 px-4 font-bold text-blue-700 bg-blue-50/30">
+                        {row.total} hrs
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr className="hover:bg-gray-50/50">
+                    <td className="py-3 px-4 font-semibold text-left text-gray-800">
+                      General Logged Work
+                    </td>
+                    <td className="py-3 px-2 font-medium text-gray-700">{timesheetData.dailyTotals?.mon || 0}h</td>
+                    <td className="py-3 px-2 font-medium text-gray-700">{timesheetData.dailyTotals?.tue || 0}h</td>
+                    <td className="py-3 px-2 font-medium text-gray-700">{timesheetData.dailyTotals?.wed || 0}h</td>
+                    <td className="py-3 px-2 font-medium text-gray-700">{timesheetData.dailyTotals?.thu || 0}h</td>
+                    <td className="py-3 px-2 font-medium text-gray-700">{timesheetData.dailyTotals?.fri || 0}h</td>
+                    <td className="py-3 px-2 text-gray-400">{timesheetData.dailyTotals?.sat || 0}h</td>
+                    <td className="py-3 px-2 text-gray-400">{timesheetData.dailyTotals?.sun || 0}h</td>
+                    <td className="py-3 px-4 font-bold text-blue-700 bg-blue-50/50">
+                      {timesheetData.grandTotal || 0} hrs
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+              {/* Grand Total Summary Row */}
+              <tfoot>
+                <tr className="bg-gray-100/80 font-bold text-gray-900 border-t-2 border-gray-300">
+                  <td className="py-3 px-4 text-left uppercase text-[11px] tracking-wider text-gray-700">
+                    Daily Total Hours (দৈনিক মোট)
                   </td>
-                  <td className="py-3 px-2 font-medium text-gray-700">{timesheet?.dailyHours?.mon || 0}h</td>
-                  <td className="py-3 px-2 font-medium text-gray-700">{timesheet?.dailyHours?.tue || 0}h</td>
-                  <td className="py-3 px-2 font-medium text-gray-700">{timesheet?.dailyHours?.wed || 0}h</td>
-                  <td className="py-3 px-2 font-medium text-gray-700">{timesheet?.dailyHours?.thu || 0}h</td>
-                  <td className="py-3 px-2 font-medium text-gray-700">{timesheet?.dailyHours?.fri || 0}h</td>
-                  <td className="py-3 px-2 text-gray-400">{timesheet?.dailyHours?.sat || 0}h</td>
-                  <td className="py-3 px-2 text-gray-400">{timesheet?.dailyHours?.sun || 0}h</td>
-                  <td className="py-3 px-4 font-bold text-blue-700 bg-blue-50/50">
-                    {timesheet?.totalHours || timeSummary.weekHours || 0} hrs
+                  <td className="py-3 px-2 text-indigo-700">{timesheetData.dailyTotals?.mon || 0}h</td>
+                  <td className="py-3 px-2 text-indigo-700">{timesheetData.dailyTotals?.tue || 0}h</td>
+                  <td className="py-3 px-2 text-indigo-700">{timesheetData.dailyTotals?.wed || 0}h</td>
+                  <td className="py-3 px-2 text-indigo-700">{timesheetData.dailyTotals?.thu || 0}h</td>
+                  <td className="py-3 px-2 text-indigo-700">{timesheetData.dailyTotals?.fri || 0}h</td>
+                  <td className="py-3 px-2 text-gray-500">{timesheetData.dailyTotals?.sat || 0}h</td>
+                  <td className="py-3 px-2 text-gray-500">{timesheetData.dailyTotals?.sun || 0}h</td>
+                  <td className="py-3 px-4 text-base font-extrabold text-blue-800 bg-blue-100/70">
+                    {timesheetData.grandTotal || timeSummary.weekHours || 0} hrs
                   </td>
                 </tr>
-              </tbody>
+              </tfoot>
             </table>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-between text-xs text-gray-500 pt-2 border-t border-gray-100">
-            <span>Standard Weekly Requirement: 40 hours</span>
+            <span>Standard Weekly Target: 40.0 hours</span>
             <span>
-              {timesheet?.approvedByName && `Approved by: ${timesheet.approvedByName}`}
+              {timesheetData.timesheet?.approvedByName
+                ? `Approved by: ${timesheetData.timesheet.approvedByName}`
+                : `Week Period: ${timesheetData.timesheet?.weekLabel || "Current Week"}`}
             </span>
           </div>
         </div>
       )}
 
-      {/* VIEW 3: TASK-BASED TIME ENTRIES TABLE (Requirement 3) */}
-      {activeView === "entries" && (
+      {/* ========================================================================= */}
+      {/* 3. TASK-BASED TIME ENTRIES LOG HISTORY (Requirement 3)                    */}
+      {/* ========================================================================= */}
+      {(activeView === "all" || activeView === "entries") && (
         <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-4">
           <div className="flex items-center justify-between border-b border-gray-100 pb-4">
             <div>
               <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                <span>📋</span> 3. Task-Based Time Entries Log
+                <span>📋</span> 3. Task-Based Time Entries (কাজের বিবরণী হিস্ট্রি)
               </h2>
               <p className="text-xs text-gray-500 mt-0.5">
-                Detailed audit trail of all recorded working sessions linked to respective tasks.
+                History of recorded work sessions: task name, start to end time (কয়টা থেকে কয়টা), total duration (মোট সময়), and status.
               </p>
             </div>
-            <span className="text-xs font-semibold bg-gray-100 text-gray-700 px-3 py-1 rounded-full">
-              {recentEntries.length} Records
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-semibold bg-gray-100 text-gray-700 px-3 py-1 rounded-full">
+                {recentEntries.length} Recorded Sessions
+              </span>
+              <button
+                onClick={() => setShowManualModal(true)}
+                className="text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 font-semibold px-3 py-1.5 rounded-lg transition"
+              >
+                + Add Time Log
+              </button>
+            </div>
           </div>
 
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
               <thead>
                 <tr className="bg-gray-50 text-gray-500 uppercase font-semibold border-b border-gray-100">
-                  <th className="py-3 px-3">Date</th>
-                  <th className="py-3 px-3">Task Title</th>
-                  <th className="py-3 px-3">Duration</th>
+                  <th className="py-3 px-3">Date (তারিখ)</th>
+                  <th className="py-3 px-3">Task Title (টাস্কের নাম)</th>
+                  <th className="py-3 px-3">Time Range (কয়টা থেকে কয়টা)</th>
+                  <th className="py-3 px-3">Total Duration (মোট সময়)</th>
                   <th className="py-3 px-3">Category</th>
                   <th className="py-3 px-3">Source</th>
                   <th className="py-3 px-3">Status</th>
+                  <th className="py-3 px-3 text-right">Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {recentEntries.length > 0 ? (
                   recentEntries.map((entry: any) => (
-                    <tr key={entry._id || entry.id} className="hover:bg-gray-50/60">
+                    <tr key={entry._id || entry.id} className="hover:bg-gray-50/60 transition">
                       <td className="py-3 px-3 font-medium text-gray-600">
                         {entry.date}
                       </td>
                       <td className="py-3 px-3 font-semibold text-gray-800">
-                        {entry.taskTitle || "Work Task"}
+                        <div>{entry.taskTitle || "Work Task"}</div>
+                        {entry.notes && (
+                          <div className="text-[11px] text-gray-400 font-normal truncate max-w-xs">{entry.notes}</div>
+                        )}
                       </td>
-                      <td className="py-3 px-3 font-bold text-blue-700">
+                      <td className="py-3 px-3 text-gray-600 font-medium">
+                        {formatTimeRange(entry.startTime, entry.endTime, entry.durationHours)}
+                      </td>
+                      <td className="py-3 px-3 font-extrabold text-blue-700 text-sm">
                         {entry.durationHours} hrs
                       </td>
                       <td className="py-3 px-3 text-gray-600">
@@ -570,11 +747,13 @@ const Timer: React.FC = () => {
                         </span>
                       </td>
                       <td className="py-3 px-3 text-gray-500 uppercase text-[10px]">
-                        {entry.source || "timer"}
+                        <span className={`px-2 py-0.5 rounded ${entry.source === "timer" ? "bg-purple-50 text-purple-700" : "bg-gray-100 text-gray-600"}`}>
+                          {entry.source || "timer"}
+                        </span>
                       </td>
                       <td className="py-3 px-3">
                         <span
-                          className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${
+                          className={`px-2.5 py-1 rounded-full text-[10px] font-semibold ${
                             entry.status === "Approved"
                               ? "bg-green-100 text-green-800"
                               : entry.status === "Submitted"
@@ -585,17 +764,121 @@ const Timer: React.FC = () => {
                           {entry.status || "Submitted"}
                         </span>
                       </td>
+                      <td className="py-3 px-3 text-right">
+                        <button
+                          onClick={() => handleDeleteEntry(entry._id || entry.id)}
+                          className="text-red-500 hover:text-red-700 hover:bg-red-50 p-1.5 rounded transition"
+                          title="Delete entry"
+                        >
+                          🗑️
+                        </button>
+                      </td>
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={6} className="py-8 text-center text-gray-400">
-                      {loadingHistory ? "Loading time entries..." : "No recorded time entries found."}
+                    <td colSpan={8} className="py-8 text-center text-gray-400">
+                      {loadingHistory ? "Loading time entries history..." : "No recorded time entries found. Start the stopwatch above to record work."}
                     </td>
                   </tr>
                 )}
               </tbody>
             </table>
+          </div>
+        </div>
+      )}
+
+      {/* Manual Time Entry Modal */}
+      {showManualModal && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 space-y-4">
+            <div className="flex justify-between items-center border-b pb-3">
+              <h3 className="font-bold text-gray-900 text-lg">Log Past Work Session</h3>
+              <button onClick={() => setShowManualModal(false)} className="text-gray-400 hover:text-gray-600 font-bold">
+                ✕
+              </button>
+            </div>
+            <form onSubmit={handleManualSubmit} className="space-y-4 text-xs">
+              <div>
+                <label className="block font-semibold text-gray-700 mb-1">Select Task:</label>
+                <select
+                  required
+                  value={manualForm.taskId}
+                  onChange={(e) => setManualForm({ ...manualForm, taskId: e.target.value })}
+                  className="w-full px-3 py-2 border rounded-lg text-sm"
+                >
+                  <option value="">-- Choose Task --</option>
+                  {tasks.map((t) => (
+                    <option key={t._id || t.id} value={t._id || t.id}>
+                      {t.title}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block font-semibold text-gray-700 mb-1">Date:</label>
+                  <input
+                    type="date"
+                    required
+                    value={manualForm.date}
+                    onChange={(e) => setManualForm({ ...manualForm, date: e.target.value })}
+                    className="w-full px-3 py-2 border rounded-lg text-sm"
+                  />
+                </div>
+                <div>
+                  <label className="block font-semibold text-gray-700 mb-1">Duration (Hours):</label>
+                  <input
+                    type="number"
+                    step="0.25"
+                    min="0.25"
+                    max="24"
+                    required
+                    value={manualForm.durationHours}
+                    onChange={(e) => setManualForm({ ...manualForm, durationHours: e.target.value })}
+                    className="w-full px-3 py-2 border rounded-lg text-sm"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block font-semibold text-gray-700 mb-1">Category:</label>
+                <select
+                  value={manualForm.category}
+                  onChange={(e) => setManualForm({ ...manualForm, category: e.target.value })}
+                  className="w-full px-3 py-2 border rounded-lg text-sm"
+                >
+                  <option value="Work">Work</option>
+                  <option value="Meeting">Meeting</option>
+                  <option value="Training">Training</option>
+                  <option value="Review">Review</option>
+                </select>
+              </div>
+              <div>
+                <label className="block font-semibold text-gray-700 mb-1">Notes / Description:</label>
+                <textarea
+                  value={manualForm.notes}
+                  onChange={(e) => setManualForm({ ...manualForm, notes: e.target.value })}
+                  placeholder="What did you work on during this time?"
+                  className="w-full px-3 py-2 border rounded-lg text-sm"
+                  rows={2}
+                />
+              </div>
+              <div className="flex justify-end gap-2 pt-2 border-t">
+                <button
+                  type="button"
+                  onClick={() => setShowManualModal(false)}
+                  className="px-4 py-2 border rounded-lg hover:bg-gray-50"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold"
+                >
+                  Save Entry
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

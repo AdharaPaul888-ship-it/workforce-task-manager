@@ -177,32 +177,128 @@ exports.setIdle = async (req, res) => {
 };
 
 exports.getWeeklyTimesheet = async (req, res) => {
-  const { start, userId } = req.query;
-  let filter = { tenant: req.tenantId };
-  if (userId) filter.user = userId;
-  
-  const startDate = start ? new Date(start) : new Date();
-  const endDate = new Date(startDate);
-  endDate.setDate(endDate.getDate() + 6);
-  
-  let timesheet = await Timesheet.findOne({ tenant: req.tenantId, user: filter.user, weekStart: startDate }).lean();
-  
-  if (!timesheet) {
-    // Create default timesheet for the week
-    timesheet = new Timesheet({
-      tenant: req.tenantId,
-      user: filter.user,
-      weekStart: startDate,
-      weekEnd: endDate,
-      weekLabel: `Week ${Math.floor((startDate.getDate() - 1) / 7) + 1}`,
-      dailyHours: {},
-      totalHours: 0,
-      status: "Draft",
+  try {
+    const { start, userId } = req.query;
+    const targetUserId = userId || req.user._id;
+    const tenantId = req.tenantId || req.user.tenant;
+
+    const startDate = start ? new Date(start) : new Date();
+    const endDate = new Date(startDate);
+    endDate.setDate(endDate.getDate() + 6);
+
+    let timesheet = await Timesheet.findOne({ tenant: tenantId, user: targetUserId, weekStart: startDate }).lean();
+
+    if (!timesheet) {
+      timesheet = await Timesheet.findOne({ tenant: tenantId, user: targetUserId }).sort({ weekStart: -1 }).lean();
+    }
+
+    if (!timesheet) {
+      timesheet = new Timesheet({
+        tenant: tenantId,
+        user: targetUserId,
+        weekStart: startDate,
+        weekEnd: endDate,
+        weekLabel: `Week ${Math.floor((startDate.getDate() - 1) / 7) + 1}`,
+        dailyHours: {},
+        totalHours: 0,
+        status: "Draft",
+      });
+      await timesheet.save();
+    }
+
+    // Build task-by-task weekly hours (Requirement 2: Monday to Friday / Sunday breakdown per task)
+    const userTasks = await Task.find({ tenant: tenantId, owner: targetUserId }).lean();
+    const allTenantTasks = userTasks.length > 0 ? userTasks : await Task.find({ tenant: tenantId }).lean();
+    const entries = await TimeEntry.find({ tenant: tenantId, user: targetUserId }).lean();
+
+    const taskMap = {};
+    const dayKeys = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+
+    allTenantTasks.forEach((t) => {
+      taskMap[t._id.toString()] = {
+        taskId: t._id,
+        taskTitle: t.title,
+        category: t.category || "General",
+        mon: 0,
+        tue: 0,
+        wed: 0,
+        thu: 0,
+        fri: 0,
+        sat: 0,
+        sun: 0,
+        total: 0,
+      };
     });
-    await timesheet.save();
+
+    entries.forEach((e) => {
+      const tId = e.task ? e.task.toString() : "other";
+      const title = e.taskTitle || "General Work";
+      if (!taskMap[tId]) {
+        taskMap[tId] = {
+          taskId: tId,
+          taskTitle: title,
+          category: e.category || "Work",
+          mon: 0,
+          tue: 0,
+          wed: 0,
+          thu: 0,
+          fri: 0,
+          sat: 0,
+          sun: 0,
+          total: 0,
+        };
+      }
+      const d = new Date(e.date + "T00:00:00");
+      const dayKey = dayKeys[d.getDay()];
+      const dur = Number(e.durationHours || 0);
+      taskMap[tId][dayKey] = Number((taskMap[tId][dayKey] + dur).toFixed(2));
+      taskMap[tId].total = Number((taskMap[tId].total + dur).toFixed(2));
+    });
+
+    const taskRows = Object.values(taskMap).filter(
+      (r) => r.total > 0 || allTenantTasks.some((ut) => ut._id.toString() === r.taskId?.toString())
+    );
+
+    const dailyTotals = {
+      mon: Number(taskRows.reduce((sum, r) => sum + r.mon, 0).toFixed(2)),
+      tue: Number(taskRows.reduce((sum, r) => sum + r.tue, 0).toFixed(2)),
+      wed: Number(taskRows.reduce((sum, r) => sum + r.wed, 0).toFixed(2)),
+      thu: Number(taskRows.reduce((sum, r) => sum + r.thu, 0).toFixed(2)),
+      fri: Number(taskRows.reduce((sum, r) => sum + r.fri, 0).toFixed(2)),
+      sat: Number(taskRows.reduce((sum, r) => sum + r.sat, 0).toFixed(2)),
+      sun: Number(taskRows.reduce((sum, r) => sum + r.sun, 0).toFixed(2)),
+    };
+
+    const grandTotal = Number(
+      (
+        dailyTotals.mon +
+        dailyTotals.tue +
+        dailyTotals.wed +
+        dailyTotals.thu +
+        dailyTotals.fri +
+        dailyTotals.sat +
+        dailyTotals.sun
+      ).toFixed(2)
+    );
+
+    res.json({
+      success: true,
+      data: {
+        timesheet: {
+          ...timesheet,
+          id: timesheet._id || timesheet.id,
+          dailyHours: dailyTotals,
+          totalHours: grandTotal || timesheet.totalHours || 0,
+        },
+        taskRows,
+        dailyTotals,
+        grandTotal,
+      },
+    });
+  } catch (err) {
+    console.error("getWeeklyTimesheet error:", err);
+    res.status(500).json({ success: false, message: "Error loading weekly timesheet" });
   }
-  
-  res.json({ success: true, data: timesheet });
 };
 
 exports.updateTimesheetCell = async (req, res) => {
@@ -384,5 +480,19 @@ exports.getTimeSummary = async (req, res) => {
   } catch (err) {
     console.error("Time Summary error:", err);
     res.status(500).json({ success: false, message: "Error calculating time summary" });
+  }
+};
+
+exports.deleteTimeEntry = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const entry = await TimeEntry.findOneAndDelete({
+      _id: id,
+      tenant: req.tenantId || req.user?.tenant,
+    });
+    if (!entry) return res.status(404).json({ success: false, message: "Entry not found" });
+    res.json({ success: true, message: "Time entry deleted" });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
   }
 };

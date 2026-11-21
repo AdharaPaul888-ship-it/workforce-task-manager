@@ -10,7 +10,7 @@ const notificationSchema = new mongoose.Schema(
     message: { type: String, required: true },
     category: {
       type: String,
-      enum: ["timesheet", "plan", "leave", "attendance", "payroll", "security", "recruitment", "monthly_plan", "performance"],
+      enum: ["timesheet", "plan", "leave", "attendance", "payroll", "security"],
     },
     linkTab: { type: String },
     readBy: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],

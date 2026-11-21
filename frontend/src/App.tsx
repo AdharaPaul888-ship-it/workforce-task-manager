@@ -10,19 +10,13 @@ import Tasks from "./pages/Tasks";
 import Attendance from "./pages/Attendance";
 import Timer from "./pages/Timer";
 import Leave from "./pages/Leave";
-import Recruitment from "./pages/Recruitment";
-import MonthlyPlanning from "./pages/MonthlyPlanning";
-import Performance from "./pages/Performance";
 
 const navItems = [
   { to: "/dashboard", label: "Dashboard", dot: "bg-emerald-500" },
   { to: "/tasks", label: "Task Management", dot: "bg-purple-500", tasks: true },
   { to: "/attendance", label: "Attendance Management", dot: "bg-amber-500" },
   { to: "/timer", label: "Time Tracking", dot: "bg-blue-500", timer: true },
-  { to: "/monthly-planning", label: "Monthly Planning", dot: "bg-cyan-500" },
-  { to: "/recruitment", label: "Recruitment & Onboarding", dot: "bg-indigo-500", recruitment: true },
   { to: "/leave", label: "Leave & Holidays", dot: "bg-teal-500", leaves: true },
-  { to: "/performance", label: "Performance Management", dot: "bg-rose-500" },
 ];
 
 const Sidebar = () => {
@@ -135,10 +129,7 @@ const MainLayout = () => {
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/attendance" element={<Attendance />} />
           <Route path="/timer" element={<Timer />} />
-          <Route path="/monthly-planning" element={<MonthlyPlanning />} />
-          <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/leave" element={<Leave />} />
-          <Route path="/performance" element={<Performance />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </main>

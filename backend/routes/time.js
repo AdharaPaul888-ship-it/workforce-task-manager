@@ -15,8 +15,14 @@ const {
   getTimeEntries,
   createTimeEntry,
   getTimeSummary,
+  deleteTimeEntry,
 } = require("../controllers/timeController");
+const { protect, tenantScope } = require("../middlewares/auth");
 const { authorize } = require("../middlewares/authorize");
+
+// Require authentication for all time tracking endpoints
+router.use(protect);
+router.use(tenantScope);
 
 router.get("/timer", getTimer);
 router.post("/timer/start", authorize("timelog.record"), startTimer);
@@ -32,6 +38,7 @@ router.get("/timesheets", getTimesheets);
 router.post("/timesheets/:id/approve", approveTimesheet);
 router.get("/entries", getTimeEntries);
 router.post("/entries", createTimeEntry);
+router.delete("/entries/:id", deleteTimeEntry);
 router.get("/summary", getTimeSummary);
 
 module.exports = router;
